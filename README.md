@@ -1,4 +1,4 @@
-# Stack Overflow Clone  *** Proposal to be improved this Evening!! ***
+# Stack Overflow Clone 
 
 [Heroku link][heroku]
 

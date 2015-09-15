@@ -1,0 +1,41 @@
+<h1> Welcome to SeaStack <h1>
+  <% if flash.now[:errors] %>
+    <% flash.now[:errors].each do |error| %>
+      <%= error %> <br/>
+      <% end %>
+      <% end %>
+
+
+<form action= "<%= users_url %>" method="post">
+  <input type="hidden"
+  name="authenticity_token"
+  value="<%= form_authenticity_token  %>">
+  <label for="user_name">Username</label>
+  <input
+   type="text"
+   name="user[name]"
+   value="<%= @user.name %>"
+   id="user_name">
+   <br>
+
+   <label for="user_email">Email<label>
+   <input
+     type="text"
+     name="user[email]"
+     id="user_email">
+   <br>
+
+   <label for="user_password">Password</label>
+   <input
+     type="password"
+     name="user[password]"
+     id="user_password">
+     <br>
+
+   <label for="user_password">Password Confirmation</label>
+   <input
+     type="password"
+     name="user[password_confirmation]"
+     id="user_password">
+  <input type="submit">
+ </form>
