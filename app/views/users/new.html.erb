@@ -1,4 +1,6 @@
-<h1> Welcome to SeaStack <h1>
+
+<body>
+<h1> Welcome to SeaStack </h1>
   <% if flash.now[:errors] %>
     <% flash.now[:errors].each do |error| %>
       <%= error %> <br/>
@@ -11,6 +13,7 @@
   name="authenticity_token"
   value="<%= form_authenticity_token  %>">
   <label for="user_name">Username</label>
+  <br>
   <input
    type="text"
    name="user[name]"
@@ -19,6 +22,7 @@
    <br>
 
    <label for="user_email">Email<label>
+     <br>
    <input
      type="text"
      name="user[email]"
@@ -26,6 +30,7 @@
    <br>
 
    <label for="user_password">Password</label>
+   <br>
    <input
      type="password"
      name="user[password]"
@@ -33,9 +38,12 @@
      <br>
 
    <label for="user_password">Password Confirmation</label>
+   <br>
    <input
      type="password"
      name="user[password_confirmation]"
      id="user_password">
+     <br>
   <input type="submit">
  </form>
+</body>

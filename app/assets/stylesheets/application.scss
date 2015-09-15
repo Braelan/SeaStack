@@ -1,0 +1,88 @@
+html, body, section, article, h1, h2, p, strong, em, a {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  vertical-align: baseline;
+  box-sizing: inherit;
+  font:  inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  display: inline-block;
+  box-sizing: content-box;
+  width: auto;
+}
+
+input[type= "submit"] {
+  display: inline;
+  cursor: pointer;
+}
+
+body {
+  padding: 100px 0;
+  font-family: sans-serif;
+  background: white;
+}
+
+form {
+  width: 180px;
+  margin: auto;
+  padding: 50px;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.input {
+  margin: 20px 0;
+}
+
+.input > label {
+  display: block;
+  font-weight: bold;
+}
+
+.input > input {
+  display: block;
+  border: 2px solid black;
+  padding: 5px;
+  width: 286px;
+  border-radius: 5px;
+}
+
+input >input:focus {
+  border-color: #0c0;
+}
+
+
+
+h1 {
+
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
