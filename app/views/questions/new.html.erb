@@ -5,7 +5,7 @@
    <% end %>
 <% end %>
 
-<form name="f" action=" <%= questions_url %>" method= "POST">
+<form action=" <%= questions_url %>" method= "POST">
   <input type="hidden"
   name="authenticity_token"
   value=" <%= form_authenticity_token %>">
@@ -18,7 +18,7 @@
   <textarea name="question[body]" id="question_body"></textarea>
 
   <label for="tags">Tags</label>
-  <input type= "text" name="Tag[tags]" id="question_tags">
+  <input type= "text" name="tag[tags]" id="question_tags">
   <input type="checkbox" name="question[response_notification]" value="true">
   notify me via email when there are new responses
   </input>

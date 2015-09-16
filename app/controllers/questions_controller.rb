@@ -18,6 +18,8 @@ class QuestionsController < ApplicationController
 
    if params[:question][:response_notification] == "true"
      @question.response_notification= true;
+   else
+     @question.response_notification= false;
    end
    @question.user_id = current_user.id;
 
@@ -33,6 +35,10 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:title, :body)
+  end
+
+  def tag_params
+    # use to add tags at some point
   end
 
 end
