@@ -1,0 +1,44 @@
+<h1>Question:<h1>
+<br>
+<h1> <%= @question.title %> </h1>
+<br>
+<h2> <%= @question.body %> <h2>
+<br>
+<h1>Answer:<h1>
+<br>
+<p></p>
+<h2> <% @question.answers.each do |answer| %>
+     <%= answer.body %>
+     <% end %>
+
+<form action="<%=answers_url%>" method="post">
+  <input type="hidden"
+   name="authenticity_token"
+   value="<%=form_authenticity_token%>">
+   <input type="hidden"
+    name="answer[question_id]"
+    value="<%= @question.id %>">
+  <label for="Answer">Answer</label>
+   <textarea id="Answer"
+   type="text"
+   name="answer[body]">
+ </textarea>
+   <button class="answer">Post Answer</button>
+<form>
+
+  <p></p>
+  <br>
+  <form action="<%=comments_url%>" method="post">
+    <input type="hidden"
+     name="authenticity_token"
+     value="<%=form_authenticity_token%>">
+    <input type="hidden"
+      name="comment[question_id]"
+      value=" <%= @question.id %>">
+    <label for="Comment">Comment</label>
+     <textarea id="Comment"
+     type="text"
+     name="comment[body]">
+   </textarea>
+     <button class="comment">Post Comment</button>
+  <form>

@@ -11,10 +11,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915140904) do
+ActiveRecord::Schema.define(version: 20150916212747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.text     "body",        null: false
+    t.integer  "user_id"
+    t.integer  "upvotes"
+    t.integer  "question_id", null: false
+    t.boolean  "selected"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
+  add_index "answers", ["upvotes"], name: "index_answers_on_upvotes", using: :btree
+  add_index "answers", ["user_id"], name: "index_answers_on_user_id", using: :btree
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "body",        null: false
+    t.integer  "upvotes"
+    t.integer  "question_id"
+    t.integer  "answer_id"
+    t.integer  "user_id",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "comments", ["answer_id"], name: "index_comments_on_answer_id", using: :btree
+  add_index "comments", ["question_id"], name: "index_comments_on_question_id", using: :btree
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "title",                 null: false
+    t.text     "body",                  null: false
+    t.integer  "user_id",               null: false
+    t.integer  "upvotes"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.boolean  "response_notification"
+  end
+
+  add_index "questions", ["title"], name: "index_questions_on_title", unique: true, using: :btree
+  add_index "questions", ["user_id"], name: "index_questions_on_user_id", using: :btree
+
+  create_table "tags", force: :cascade do |t|
+    t.integer  "question_id", null: false
+    t.string   "category",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "tags", ["category"], name: "index_tags_on_category", using: :btree
+  add_index "tags", ["question_id"], name: "index_tags_on_question_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            null: false

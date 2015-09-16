@@ -1,4 +1,4 @@
-# Stack Overflow Clone 
+# Stack Overflow Clone
 
 [Heroku link][heroku]
 
@@ -76,3 +76,13 @@ collections, but they will fetch from the new `search` routes.
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
+
+
+
+<!-- rm ~/.ssh/id_rsa.pub
+heroku login
+ssh-keygen -t rsa -b 4096 -C "bbraelan@gmail.com"
+heroku keys:add
+git remote add heroku git@heroku.com:pure-coast-4988.git
+git push heroku master
+heroku open -->

@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resources :users
   resources :instructions, only: [:index]
+  resources :questions
+  resources :answers, only: [:create]
+  resources :comments, only: [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
