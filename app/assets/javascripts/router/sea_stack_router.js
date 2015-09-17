@@ -1,7 +1,7 @@
 SeaStack.Routers.Router = Backbone.Router.extend({
   routes: {
-    "" : "index",
-    ":id" : "show"
+    "questions" : "index",
+    "questions/:id" : "show"
   },
 
   initialize: function(options) {
@@ -10,7 +10,8 @@ SeaStack.Routers.Router = Backbone.Router.extend({
   },
 
   index: function() {
-    debugger
+    var view = new SeaStack.Views.QuestionIndex({collection: this.collection});
+    this._swapView(view)
   },
 
   show: function (id) {
