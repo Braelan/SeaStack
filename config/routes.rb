@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resource :session, only: [:new, :create, :destroy]
-  resources :users
+   root :to =>'site#root'
+  namespace :api, :defaults => {format: :json} do 
   resources :instructions, only: [:index]
   resources :questions
   resources :answers, only: [:create]
@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'users#index'
+
+ end
+resources :users
+resource :session, only: [:new, :create, :destroy]
+resources :instructions, only: [:index]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

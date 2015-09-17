@@ -1,4 +1,4 @@
-class QuestionsController < ApplicationController
+class Api::QuestionsController < ApplicationController
   def new
     @question = Question.new
     render :new
@@ -6,11 +6,12 @@ class QuestionsController < ApplicationController
 
   def index
     @questions = Question.all
-    render :index
+    render "index"
   end
 
   def show
     @question = Question.find(params[:id])
+    render "show"
   end
 
   def create
