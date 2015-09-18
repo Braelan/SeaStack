@@ -15,8 +15,8 @@
 //= require turbolinks
 //=require underscore
 //=require backbone
-//= require jquery.serializeJSON
-//= require composite_view
+//=require jquery.serializeJSON
+//=require composite_view
 //=require sea_stack
 //=require_tree ../templates
 //=require_tree ./models

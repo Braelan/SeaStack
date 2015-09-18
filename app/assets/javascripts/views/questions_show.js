@@ -20,7 +20,10 @@ SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
     var blankAnswer = new SeaStack.Models.Answer();
     var answerForm = new SeaStack.Views.AnswerForm({question: this.model, answer: blankAnswer, collection: this.model.answers()})
     this.addSubview(".answerForm", answerForm )
-  }
+  },
+
+
+
 
 
 })

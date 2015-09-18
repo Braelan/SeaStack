@@ -1,12 +1,12 @@
 
-  <form>
+
      <input type="hidden"
-      name="answer[question_id]"
+      name="question_id"
       value="<%= question.escape("id") %>">
     <label for="Answer">Answer</label>
      <textarea id="Answer"
      type="text"
-     name="answer[body]">
+     name="body"
+     value="<%= answer.escape("body") %>">
    </textarea>
      <button class="answer">Post Answer</button>
-  <form>

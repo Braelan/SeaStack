@@ -1,6 +1,7 @@
 SeaStack.Views.AnswerForm = Backbone.View.extend({
   //intended only as a subview for a question
   //possible to add edit feature.
+  tagName: "form",
    template: JST['answers/form'],
 
    events: {
@@ -9,7 +10,7 @@ SeaStack.Views.AnswerForm = Backbone.View.extend({
 
   initialize: function (options) {
     //model is an answer object
-    this.model = options.model
+    this.model = options.answer
     //a collection of answers from this.question
     this.collection = options.collection
     this.question = options.question
@@ -26,16 +27,14 @@ SeaStack.Views.AnswerForm = Backbone.View.extend({
     event.preventDefault();
     var attrs = this.$el.serializeJSON();
     var that = this;
-
    this.model.set(attrs);
-
    this.model.save({}, {
      success: function () {
-       that.collection.add(this.model, {merge: true});
+       debugger
+      //  that.collection.add(this.model, {merge: true});
      }, errror: function () {
        console.log("the Answer tried to save, but couldn't (from answerForm :submit)")
      }
-   })
-
+   });
   }
 })

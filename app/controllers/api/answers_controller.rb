@@ -3,12 +3,12 @@ class Api::AnswersController < ApplicationController
   def create
    @answer = Answer.new(answer_params)
    @answer.user_id = current_user.id
-   if @answer.save
-     render json: @answer
-   else
-     flash.now[:errors] = @answer.errors.full_messages
-     redirect_to(:back)
-   end
+   @answer.save
+   flash.now[:errors] = @answer.errors.full_messages
+  end
+
+  def show
+
   end
 
 

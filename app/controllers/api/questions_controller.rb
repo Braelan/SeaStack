@@ -12,6 +12,7 @@ class Api::QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @comments = @question.comments
+    @answers = @question.answers
     render "show"
   end
 
