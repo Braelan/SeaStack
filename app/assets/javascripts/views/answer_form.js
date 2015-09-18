@@ -4,7 +4,7 @@ SeaStack.Views.AnswerForm = Backbone.View.extend({
    template: JST['answers/form'],
 
    events: {
-     "click submit" : "submit"
+     "click button" : "submit"
    },
 
   initialize: function (options) {

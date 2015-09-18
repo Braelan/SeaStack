@@ -1,1 +1,12 @@
-<h1> I am an AnswerForm!!! <h1>
+
+  <form>
+     <input type="hidden"
+      name="answer[question_id]"
+      value="<%= question.escape("id") %>">
+    <label for="Answer">Answer</label>
+     <textarea id="Answer"
+     type="text"
+     name="answer[body]">
+   </textarea>
+     <button class="answer">Post Answer</button>
+  <form>
