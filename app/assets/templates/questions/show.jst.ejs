@@ -10,6 +10,9 @@
   <% }); %>
 
 <div class="answerForm"> <div>
-
+  <h1>Answer:<h1>
+    <% question.answers().each( function(answer) {%>
+    <%= answer.escape("body") %>
+    <% }); %>
 <br>
 <p></p>

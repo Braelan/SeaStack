@@ -16,3 +16,9 @@ json.comments do
   end
 end
 # json.array!(@comments)
+
+json.answers do
+  json.array! @answers do |answer|
+    json.extract! answer, :id, :body, :upvotes, :user_id
+  end
+end

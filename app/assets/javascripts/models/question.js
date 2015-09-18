@@ -8,6 +8,7 @@ SeaStack.Models.Question = Backbone.Model.extend({
   },
 
   parse: function (payload) {
+    debugger
     if(payload.comments) {
       this.comments().set(payload.comments, {parse: true});
       delete payload.comments;
@@ -23,7 +24,7 @@ SeaStack.Models.Question = Backbone.Model.extend({
     //also, to initialize a questions answers from a jbuilder fetch
     this._answers = this._answers ||
     new SeaStack.Collections.Answers([],{question: this})
-    return this.answers;
+    return this._answers;
   }
 
 
