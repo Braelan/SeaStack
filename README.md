@@ -78,7 +78,7 @@ collections, but they will fetch from the new `search` routes.
 [phase-five]: ./docs/phases/phase5.md
 
 
-
+<!-- Question.create!(title: "Has it been a good year?", body: "explain", user_id: 1) -->
 <!-- rm ~/.ssh/id_rsa.pub
 heroku login
 ssh-keygen -t rsa -b 4096 -C "bbraelan@gmail.com"

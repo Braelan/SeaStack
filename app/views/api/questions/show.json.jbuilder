@@ -9,3 +9,5 @@ json.(@question,
 :created_at,
 :updated_at,
 :response_notification)
+
+# json.array!(@comments)
