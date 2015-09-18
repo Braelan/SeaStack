@@ -1,6 +1,6 @@
 
 
-json.(@question,
+json.extract! @question,
 :id,
 :title,
 :body,
@@ -8,6 +8,11 @@ json.(@question,
 :upvotes,
 :created_at,
 :updated_at,
-:response_notification)
+:response_notification
 
+json.comments do
+  json.array! @comments  do |comment|
+    json.extract! comment, :id, :body
+  end
+end
 # json.array!(@comments)
