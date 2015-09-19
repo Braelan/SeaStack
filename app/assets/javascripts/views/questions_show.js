@@ -6,7 +6,7 @@ SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
     this.collection = options.collection;
     this.listenTo(this.model, "sync", this.render)
     this.listenTo(this.collection, "sync", this.render)
-    this.listenTo(this.model.answers(), "sync", this.render)
+     this.listenTo(this.model.answers(), "sync", this.render)
   },
 
   render: function () {
