@@ -5,6 +5,7 @@ class Api::AnswersController < ApplicationController
    @answer.user_id = current_user.id
    @answer.save
    flash.now[:errors] = @answer.errors.full_messages
+   render :show
   end
 
   def show

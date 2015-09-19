@@ -15,6 +15,7 @@ SeaStack.Views.AnswerForm = Backbone.View.extend({
     this.collection = options.collection
     this.question = options.question
     this.listenTo(this.collection, "sync", this.render)
+    this.listenTo(this.model, "change", this.render)
   },
   render: function() {
     //set the question as a hidden input from the form
@@ -29,11 +30,12 @@ SeaStack.Views.AnswerForm = Backbone.View.extend({
     var that = this;
    this.model.set(attrs);
    this.model.save({}, {
-     success: function () {
-       debugger
-      //  that.collection.add(this.model, {merge: true});
-     }, errror: function () {
-       console.log("the Answer tried to save, but couldn't (from answerForm :submit)")
+      success: function () {
+        that.collection.add(that.model, {merge:true})
+
+      },
+       error: function (model, response) {
+       console.log(response.responseText)
      }
    });
   }

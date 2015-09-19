@@ -8,7 +8,6 @@ SeaStack.Models.Question = Backbone.Model.extend({
   },
 
   parse: function (payload) {
-    debugger
     if(payload.comments) {
       this.comments().set(payload.comments, {parse: true});
       delete payload.comments;
