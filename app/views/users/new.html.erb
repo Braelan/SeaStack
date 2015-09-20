@@ -1,9 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  </head>
 
 <body class="sign-up">
+  <header class="sign-up-back group">
+  <ul>
+    <li> <a href="#"> --Back to SeaStack</a></li>
+  </ul>
+
+  </header>
+
+
   <div class="Sea-title">
 <h1> Sea<em>Stack</em> </h1>
 <h2> Grow Great Algae. <h2>
 </div>
+
+<section class="divide">
+
+</section>
+
   <% if flash.now[:errors] %>
     <% flash.now[:errors].each do |error| %>
       <%= error %> <br/>
@@ -44,7 +63,6 @@
    <label for="user_password">Password Confirmation</label>
    <br>
    <input
-     class="password"
      type="password"
      name="user[password_confirmation]"
      id="user_password">
@@ -52,6 +70,28 @@
   <div>
   <input class"sign-upsub" type="submit">
 </div>
-B=
 </form>
+
+<div class="account">
+  Already registered? <a href="/session/new">Log in</a>
+</div>
+
+<footer class="sign-foot group">
+<ul class="sign-foot-list group">
+  <li>tour</li>
+  <li>blog</li>
+  <li>chat</li>
+  <li>data</li>
+  <li>legal</li>
+  <li>privacy policy</li>
+  <li>contact us</li>
+  <li>feedback</li>
+</ul>
+ <p>
+   site design / logo 2015 SeaStack; made by Braelan at App Accademy
+ </p>
+</footer>
+
+
 </body>
+</html>
