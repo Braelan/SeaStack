@@ -1,3 +1,64 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ .sign-in{
+  background-color: #F6F6F6;
+}
+
+button, input[type="submit"] {
+  cursor: pointer;
+}
+
+input[type= "submit"] {
+  display: inline;
+  cursor: pointer;
+}
+
+
+body {
+  position: relative;
+  padding: 0 0;
+  font-family: sans-serif;
+  background: white;
+}
+
+form {
+  position: absolute;
+  left: 320px;
+  width: 200px;
+  margin: auto;
+  padding: 50px;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.input {
+  margin: 20px 0;
+}
+
+.input > label {
+  display: block;
+  font-weight: bold;
+}
+
+.input > input {
+  display: block;
+  border: 2px solid black;
+  padding: 5px;
+  width: 286px;
+  border-radius: 5px;
+}
+
+input >input:focus {
+  border-color: #0c0;
+}
+
+
+
+h1 {
+
+  display: block;
+  width: 100%;
+  margin: auto;
+}

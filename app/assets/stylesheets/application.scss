@@ -1,9 +1,27 @@
-html, body, section, article, h1, h2, p, strong, em, a {
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html, body, header, nav, section, ul, li, article, h1, h2, p, strong, em, a, strong, main, button, i,
+div, h2, p, form, fieldset, label, input, textarea
+span, article, footer, time, small {
   margin: 0;
   border: 0;
   padding: 0;
   outline: 0;
-  vertical-align: baseline;
+  vertical-align: inherit;
   box-sizing: inherit;
   font:  inherit;
   text-decoration: inherit;
@@ -11,14 +29,29 @@ html, body, section, article, h1, h2, p, strong, em, a {
   color: inherit;
   background: transparent;
 }
+ul {
+  list-style: none;
+}
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 input[type="text"],
 input[type="password"],
-input[type="submit"] {
+input[type="submit"],
+input[type="email"],
+textarea,
+button
+ {
   -webkit-appearance: none;
   display: inline-block;
-  box-sizing: content-box;
   width: auto;
+}
+
+button, input[type="submit"] {
+  cursor: pointer;
 }
 
 input[type= "submit"] {
@@ -26,8 +59,9 @@ input[type= "submit"] {
   cursor: pointer;
 }
 
+
 body {
-  padding: 100px 0;
+  padding: 0 0;
   font-family: sans-serif;
   background: white;
 }
@@ -71,18 +105,8 @@ h1 {
   margin: auto;
 }
 
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}

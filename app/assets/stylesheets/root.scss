@@ -1,0 +1,42 @@
+body {
+  background: #eee;
+}
+
+.navigation {
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+
+}
+
+.header a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.header-nav {
+  margin: 0 auto;
+  width: 900px;
+}
+
+.logo {
+  float: left;
+  padding: 10px;
+}
+
+.logo:hover {
+  background: #444444;
+}
+
+.navigation-tabs  {
+  float: right;
+}
+
+.navigation-tabs > li {
+  float: left;
+  padding: 10px;
+}
+
+.navigation-tabs > li:hover {
+  background: #444444
+}
