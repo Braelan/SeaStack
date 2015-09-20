@@ -27,7 +27,7 @@ span, article, footer, time, small {
   text-decoration: inherit;
   text-align: inherit;
   color: inherit;
-  background: transparent;
+  background: inherit;
 }
 ul {
   list-style: none;
@@ -50,60 +50,7 @@ button
   width: auto;
 }
 
-button, input[type="submit"] {
-  cursor: pointer;
-}
 
-input[type= "submit"] {
-  display: inline;
-  cursor: pointer;
-}
-
-
-body {
-  padding: 0 0;
-  font-family: sans-serif;
-  background: white;
-}
-
-form {
-  width: 180px;
-  margin: auto;
-  padding: 50px;
-  background: white;
-  border: 1px solid gray;
-  border-radius: 5px;
-}
-
-.input {
-  margin: 20px 0;
-}
-
-.input > label {
-  display: block;
-  font-weight: bold;
-}
-
-.input > input {
-  display: block;
-  border: 2px solid black;
-  padding: 5px;
-  width: 286px;
-  border-radius: 5px;
-}
-
-input >input:focus {
-  border-color: #0c0;
-}
-
-
-
-h1 {
-
-  display: block;
-  width: 100%;
-  margin: auto;
-}
 
 .group:after {
   content: "";

@@ -1,7 +1,9 @@
 
-<body class="sign-in">
-<h1> Welcome to SeaStack </h1>
+<body class="sign-up">
+  <div class="Sea-title">
+<h1> Sea<em>Stack</em> </h1>
 <h2> Grow Great Algae. <h2>
+</div>
   <% if flash.now[:errors] %>
     <% flash.now[:errors].each do |error| %>
       <%= error %> <br/>
@@ -18,11 +20,11 @@
   <input
    type="text"
    name="user[name]"
-   value="<%= @user.name %>"
+   value="J.Sparrow"
    id="user_name">
    <br>
 
-   <label for="user_email">Email<label>
+   <label for="user_email">Email</label>
      <br>
    <input
      type="text"
@@ -42,10 +44,14 @@
    <label for="user_password">Password Confirmation</label>
    <br>
    <input
+     class="password"
      type="password"
      name="user[password_confirmation]"
      id="user_password">
      <br>
-  <input type="submit">
- </form>
+  <div>
+  <input class"sign-upsub" type="submit">
+</div>
+B=
+</form>
 </body>

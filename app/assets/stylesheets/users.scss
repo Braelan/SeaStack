@@ -1,8 +1,17 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
- .sign-in{
+ .sign-up{
   background-color: #F6F6F6;
+}
+
+.Sea-title{
+  text-align: center;
+  font-size:25px
+}
+
+.Sea-title em {
+  color: #154393;
 }
 
 button, input[type="submit"] {
@@ -15,50 +24,89 @@ input[type= "submit"] {
 }
 
 
-body {
+.sign-up {
   position: relative;
   padding: 0 0;
   font-family: sans-serif;
-  background: white;
+  align-items: center;
 }
 
-form {
-  position: absolute;
-  left: 320px;
-  width: 200px;
-  margin: auto;
+.Sea-title{
+
+  margin: 100px 0 35px 0;
+  text-align: center;
+  white-space:nowrap;
+  overflow: hidden;
+}
+
+.sign-up > .input {
+  align: center;
+  left: 300px;
+  top: 200px;
+  width: 250px;
+  height:350px;
+  margin: 10px 0 0 300px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 50px;
   background: white;
-  border: 1px solid gray;
-  border-radius: 5px;
-}
+  border: 1px solid #E6E6E6;
 
-.input {
-  margin: 20px 0;
 }
-
-.input > label {
-  display: block;
+.sign-up > .input > label {
+  font-size: 14px;
   font-weight: bold;
 }
-
-.input > input {
+.sign-up > .input > input {
   display: block;
-  border: 2px solid black;
-  padding: 5px;
-  width: 286px;
-  border-radius: 5px;
-}
-
-input >input:focus {
-  border-color: #0c0;
+  width: 250px;
+  padding: 8px 5px 8px 5px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #E6E6E6;
 }
 
 
+.sign-up > .input > div > input  {
+  background: #0077CC;
+  padding: 10px  40px 10px 40px;
+  font-size: 12px;
+  color: white;
+  border-radius: 2px;
+  float: right;
 
-h1 {
-
-  display: block;
-  width: 100%;
-  margin: auto;
 }
+
+.sign-up > .input > input:focus {
+  box-shadow: 0 0 5px rgba(84, 160, 244, 1);
+border: 1px solid rgba(84, 160, 244, 1);
+}
+//
+// .input {
+//   margin: 20px 0;
+// }
+//
+// .input > label {
+//   display: block;
+//   font-weight: bold;
+// }
+//
+// .input > input {
+//   display: block;
+//   border: 2px solid red;
+//   padding: 5px;
+//   width: 100px;
+//   border-radius: 5px;
+// }
+//
+// input >input:focus {
+//   border-color: #0c0;
+// }
+//
+//
+//
+// h1 {
+//
+//   display: block;
+//   width: 100%;
+//   margin: auto;
+// }
