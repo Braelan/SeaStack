@@ -1,3 +1,5 @@
+
+
 class Api::QuestionsController < ApplicationController
   def new
     @question = Question.new
@@ -18,19 +20,22 @@ class Api::QuestionsController < ApplicationController
 
   def create
    @question = Question.new(question_params)
-
    if params[:question][:response_notification] == "true"
      @question.response_notification= true;
    else
      @question.response_notification= false;
    end
-   @question.user_id = current_user.id;
-
-   if @question.try(:save)
-     render :show
+   fail
+   if signed_in?
+     @question.user_id = current_user.id;
+     if @question.save
+       render :show
+     else
+     flash.now[:errors] = @question.errors.full_messages
+     render :new
+     end
    else
-   flash.now[:errors] = @question.errors.full_messages
-   render :new
+    flash.now[:errors] = "You have to be logged in to submit a question"
    end
   end
 

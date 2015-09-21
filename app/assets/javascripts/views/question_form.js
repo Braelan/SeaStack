@@ -23,7 +23,7 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
    this.model.save({}, {
    success: function() {
      that.collection.add(that.model, {merge:true})
-     Backbone.navigate("questions", {trigger: true})
+     Backbone.history.navigate("questions", {trigger: true})
    },
     error: function (model, response) {
       console.log(response.responseText)
