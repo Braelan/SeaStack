@@ -1,6 +1,7 @@
 SeaStack.Routers.Router = Backbone.Router.extend({
   routes: {
     "questions" : "index",
+    "questions/new" : "new",
     "questions/:id" : "show"
   },
 
@@ -18,6 +19,12 @@ SeaStack.Routers.Router = Backbone.Router.extend({
     var model = this.collection.getOrFetch(id)
     var view = new SeaStack.Views.QuestionShow({model: model, collection: this.collection});
     this._swapView(view)
+  },
+
+  new: function () {
+    var model = new SeaStack.Models.Question()
+    var view = new SeaStack.Views.QuestionForm({model: model, collection: this.collection})
+    this._swapView(view);
   },
 
   _swapView: function (view) {
