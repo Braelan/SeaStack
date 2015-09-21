@@ -5,10 +5,10 @@
    <%#end %>
 <%# end %>
 
-<form action=" <%= api_questions_url %>" method= "POST">
+<form action=" <%#= api_questions_url %>" method= "POST">
   <input type="hidden"
   name="authenticity_token"
-  value=" <%= form_authenticity_token %>">
+  value=" <%#= form_authenticity_token %>">
   <h1> Ask a Question </h1>
   <label for="question_title">Title </label>
 
