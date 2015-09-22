@@ -25,7 +25,7 @@ class Api::QuestionsController < ApplicationController
    else
      @question.response_notification= false;
    end
-   fail
+
    if signed_in?
      @question.user_id = current_user.id;
      if @question.save

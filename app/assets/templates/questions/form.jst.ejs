@@ -2,26 +2,19 @@
 <!-- would be great to have flash now errors in here for incorrect forms
 look into the error messages from fetch. -->
 <!--need a current user -->
-<input type="hidden"
- name="question_id"
- value="<%= question.escape("id") %>">
 
   <h1> Ask a Question </h1>
-  <input type="hidden"
-  name="question[user_id]"
-  id="user_id"
-  value="<%= 1 %>"
-  <label for="question_title">Title </label>
-
-  <input type="text" name="question[title]" id="question_title">
+  <label for="title">Title </label>
+  <% debugger %>
+  <input type="text" name="title" id="title">
   <br>
-  <label for="question_body">Body </label>
+  <label for="body">Body </label>
 
-  <textarea name="question[body]" id="question_body"></textarea>
+  <textarea name="body" id="body"></textarea>
   <br>
   <label for="tags">Tags</label>
-  <input type= "text" name="tag[tags]" id="question_tags">
-  <input type="checkbox" name="question[response_notification]" value="true">
+  <input type= "text" name="tags" id="tags">
+  <input type="checkbox" name="response_notification" value="true">
   notify me via email when there are new responses
   </input>
   <br>

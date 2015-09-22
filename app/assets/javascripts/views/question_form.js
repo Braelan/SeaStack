@@ -19,7 +19,6 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
    var attrs = this.$el.serializeJSON();
    var that = this;
    this.model.set(attrs)
-   debugger
    this.model.save({}, {
    success: function() {
      that.collection.add(that.model, {merge:true})
