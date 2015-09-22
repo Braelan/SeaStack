@@ -1,3 +1,86 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-question-body {
+  width: 1000px;
+  margin: 50px auto;
+}
+.new-question {
+  margin: auto;
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  float: left;
+}
+
+.new-question > h1{
+  font-size: 24px;
+}
+
+.new-question > input[type="text"] {
+  font-family: sans-serif;
+  font-size: 20px;
+  border: 1px solid #CCCCCC;
+  height: 34px;
+  width: 660px;
+}
+
+.new-question > input[type="text"]:focus {
+  padding: 0 0 0 10px;
+  border: 1px solid #0077CC
+}
+
+.new-question > .q-body {
+  font-size: 16px;
+  height: 270px;
+  width: 660px;
+  border: 1px solid #CCCCCC;
+  padding: 11px;
+}
+
+.new-question >  a > button[type="submit"] {
+  color: white;
+  background: #6393EB;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.new-question > a > button[type="submit"]:hover {
+  background: #009AFD;
+}
+
+.question-comments {
+  display: block;
+  background: #FFF7E3;
+  float: left;
+  width: 200px
+}
+
+.question-comments a {
+  color: #0077CD;
+}
+
+// style for question show
+
+  .questions-show {
+    width: 1000px;
+    margin: auto;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+  }
+
+.questions-show > h1{
+   border-bottom: 2px solid #E5E5E5;
+   font-size: 24px
+}
+
+.questions-show > i {
+  display: block;
+
+}
+
+.questions-show > i > p {
+  display: block;
+  border-bottom: 1px solid #E5E5E5;
+}

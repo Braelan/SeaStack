@@ -1,7 +1,11 @@
 body {
   background: #eee;
+  margin: 0 auto;
 }
 
+div {
+  margin: 0 auto;
+}
 .navigation {
   background-color: black;
   color: white;
@@ -19,6 +23,10 @@ body {
   width: 900px;
 }
 
+.header-nav > h2 > em {
+  color: #154393;
+  font-weight: bold;
+}
 .logo {
   float: left;
   padding: 10px;
@@ -38,5 +46,24 @@ body {
 }
 
 .navigation-tabs > li:hover {
-  background: #444444
+  background: #444444;
+}
+
+
+.site-navigation {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.site-navigation >  a {
+  background: #9EA3A9;
+  color: white;
+  margin: 4px;
+  padding: 3px;
+  display: block;
+  float: right;
+}
+
+.site-navigation >  a:hover {
+  background: #F69C55
 }

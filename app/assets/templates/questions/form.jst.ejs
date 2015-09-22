@@ -2,19 +2,41 @@
 <!-- would be great to have flash now errors in here for incorrect forms
 look into the error messages from fetch. -->
 <!--need a current user -->
-
-  <h1> Ask a Question </h1>
-  <label for="title">Title </label>
-  <input type="text" name="title" id="title">
-  <br>
-  <label for="body">Body </label>
-
-  <textarea name="body" id="body"></textarea>
-  <br>
-  <label for="tags">Tags</label>
-  <input type= "text" name="tags" id="tags">
-  <input type="checkbox" name="response_notification" value="true">
-  notify me via email when there are new responses
-  </input>
-  <br>
-  <button type="submit">Post Question</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  <link rel="stylesheet" <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <section class="new-question-body group">
+  <div class="new-question" >
+    <h1> </h1>
+    <label for="title">Title </label>
+    <input type="text" name="title" id="title">
+    <br>
+    <label for="body">Body </label>
+    <br>
+    <textarea class="q-body"name="body" id="body"></textarea>
+    <br>
+    <label for="tags">Tags</label>
+    <input type= "text" name="tags" id="tags">
+    <br>
+    <input type="checkbox" name="response_notification" value="true">
+    notify me via email when there are new responses
+    </input>
+    <br>
+    <br>
+    <a>
+    <button type="submit">Post Question</button>
+    </a>
+  </div>
+  <div class="question-comments">
+    <p>There is a lot of seaweed cultivation information
+    online, and our goal is to collect and increase it.  Please see the <a href="#">resources section</a> and search
+    the <a href="#questions">question database</a> before posting a new question here.
+    <p>
+  </div>
+</section>
+</body>
+</html>

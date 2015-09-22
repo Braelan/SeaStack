@@ -1,12 +1,26 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Mono' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
 
+  </body>
+</html>
+
+<div class="answer-form">
      <input type="hidden"
       name="question_id"
       value="<%= question.escape("id") %>">
-    <label for="Answer">Answer</label>
+    <label for="Answer">Your Answer</label>
+    <br>
      <textarea id="Answer"
      type="text"
      name="body"
      value="<%= answer.escape("body") %>">
    </textarea>
+   <br>
      <button class="answer">Post Answer</button>
+</div>

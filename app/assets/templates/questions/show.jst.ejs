@@ -1,18 +1,38 @@
-<h1>Question:<h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+<section class="questions-show">
+
+
+
+
 <br>
+<h1>
 <%= question.escape("title") %>
+</h1>
 <br>
-<h2> <%= question.escape("body") %> <h2>
+<h2> <%= question.escape("body") %> </h2>
 <br>
-<h2> Comments: <h2>
+<h2> Comments: </h2>
   <% question.comments().each( function(comment) {%>
   <%= comment.escape("body") %>
   <% }); %>
 
-<div class="answerForm"> <div>
-  <h1>Answer:<h1>
+  <h1>Answer:</h1>
+  <i class= "answers">
     <% question.answers().each( function(answer) {%>
-    <%= answer.escape("body") %>
+    <p class=answer> <%= answer.escape("body") %> </p><br>
     <% }); %>
+  </i>
 <br>
 <p></p>
+<div class="answerForm"> </div>
+</section>
