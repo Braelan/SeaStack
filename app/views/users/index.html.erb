@@ -1,16 +1,146 @@
-<h1> Welcome to SeaStack </h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+   <style>
+     html {
+       /*background: url("blue_background.png") no-repeat center center fixed;*/
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+     }
+    body {
+      position: relative;
+    }
 
-<p> This site is a forum for the advancement of Seaweed.</p>
+    .header {
+      display: block;
+      background: yellow;
+      height: 100px;
+      width: 1000px;
+    }
+    .main {
+      position: relative;
+      display: block;
+      background: #0c0;
+      width: 1000px;
+      height: 500px;
+      overflow: hidden
+    }
 
-<p> The format is modeled on StackOverflow. </p>
+    .sidebar-left {
+      position: absolute;
+      display: block;
+      background: red;
+      height: 500px;
+      width: 200px;
+      top: 200px;
+    }
 
-<p> All resources are public. </p>
+    .viking-scene {
+      position: relative;
+    }
 
-<p> Users must sign up to ask a question or to post a response.  </p>
+     .viking-wave {
+       position: absolute;
+       top: 150px;
+       display: block;
+       background: transparent;
+       height: 100px;
+       width: 1000px;
+     }
 
-<p> Members gain reputation points by answering questions and getting upvotes. <p>
+     .viking-scene:hover .viking-wave {
+       top: 170px;
+       transition: top 5s;
+     }
+
+     .top-wave {
+       z-index: 3;
+       display: block;
+       background: transparent;
+       height: 50px;
+       width: 1000px;
+       position: absolute;
+       top: 190px;
+     }
+
+     .viking-scene:hover .top-wave{
+       top: 160px;
+       transition: top 5s;
+
+     }
+
+     .boat {
+       z-index: 2;
+       position: absolute;
+       height: auto;
+       width: 400px;
+       top: 40px;
+       left: -300px;
+     }
+
+     .viking-scene:hover .boat{
+       left: 600px;
+       transition: left 20s;
+     }
+
+
+   </style>
+
+    <title></title>
+  </head>
+  <body>
+
+
+<!--
+<h1> North East Pacific Edible SEAWEED Aquaculture </h1>
 <a href="/api/instructions">
 <button> Ask a Question </button></a>
 <a href="/api/questions">
 <button> See All Questions </button>
-</a>
+</a> -->
+<section class="header">
+  Header
+</section>
+
+<section class= "main">
+main
+  <section class="sidebar-left">
+  </section>
+  <section class="sidebar-right">
+
+  </section>
+</section>
+
+<section class="viking-scene">
+  <section class="top-wave">
+  <img src="wave2.png" alt="" />
+  </section>
+
+  <img class="boat" src="boat.png">
+
+  <section class="viking-wave">
+  <img src="wave.png" alt="" />
+  </section>
+
+  </section alt= "">
+
+
+</body>
+</html>
+
+<!-- <section class="viking-scene">
+  <section class="top-wave"></section>
+
+  <img class="boat" src="boat.png" alt="">
+
+    <section class="wave">
+
+  <section class="viking-wave">
+    <i class="wave1"></i>
+  </section>
+  </section alt= "">
+
+</section> -->
