@@ -37,6 +37,7 @@ class Api::QuestionsController < ApplicationController
    else
     flash.now[:errors] = "You have to be logged in to submit a question"
    end
+
   end
 
   private

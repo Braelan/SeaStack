@@ -1,5 +1,5 @@
 <% questions.each( function(question) { %>
-<%= question.escape('title')  %> <br>
+<a href="#questions/<%= question.escape('id')%>"><%= question.escape('title')  %></a> <br>
 <%= question.escape('body') %>
 <br><br>
 <% }); %>

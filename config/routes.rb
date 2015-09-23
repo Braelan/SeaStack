@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-   root :to =>'site#root'
+  # root "users#index"
+  root :to =>'site#root'
   namespace :api, :defaults => {format: :json} do
   resources :instructions, only: [:index]
   resources :questions

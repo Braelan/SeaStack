@@ -32,7 +32,6 @@ SeaStack.Views.AnswerForm = Backbone.View.extend({
    this.model.save({}, {
       success: function () {
         that.collection.add(that.model, {merge:true})
-
       },
        error: function (model, response) {
        console.log(response.responseText)
