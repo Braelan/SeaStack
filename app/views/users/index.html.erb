@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700,400' rel='stylesheet' type='text/css'>
    <style>
      html {
        /*background: url("blue_background.png") no-repeat center center fixed;*/
@@ -12,34 +13,87 @@
      }
     body {
       position: relative;
+      font-family: 'Amatic SC';
     }
 
     .header {
+      margin: auto;
       display: block;
-      background: yellow;
-      height: 100px;
+      /*background: yellow;*/
+      height: 200px;
       width: 1000px;
-    }
-    .main {
-      position: relative;
-      display: block;
-      background: #0c0;
-      width: 1000px;
-      height: 500px;
-      overflow: hidden
     }
 
+    .header > .nav > li{
+      text-align: center;
+      display: block;
+      margin: 65px 65px auto 65px ;
+      /*background: red;*/
+      font-size: 36px;
+      width: 200px;
+      float: left;
+    }
+    .main {
+      text-align: center;
+      margin: auto;
+      position: relative;
+      display: block;
+      /*background: #0c0;*/
+      width: 1000px;
+      height: 300px;
+      /*overflow: hidden*/
+    }
+
+    .main > h1 {
+      margin: auto;
+      font-size: 60px;
+      width: 600px;
+      font-weight: bold;
+      font-family: 'Amatic SC';
+      /*padding:50px;*/
+    }
+    .main > h1 > em{
+      font-size: 120px;
+      font-weight: bold;
+    }
     .sidebar-left {
       position: absolute;
       display: block;
       background: red;
-      height: 500px;
+      height: 480px;
       width: 200px;
-      top: 200px;
+      top: 100px;
+      font-size: 36px;
+    }
+
+    .sidebar-left > ul {
+      display:block;
+      margin: 80px auto
+    }
+
+    .sidebar-right {
+      position: absolute;
+      display: block;
+      /*background: blue;*/
+      right: 0;
+      top: 100px;
+      height: 200px;
+      width: 200px;
+      font-size: 36px;
+
+    }
+
+    .sidebar-right > ul {
+      display:block;
+      margin: 80px auto
     }
 
     .viking-scene {
+      width: 1000px;
+      height: 300px;
+      margin: auto;
       position: relative;
+      overflow: hidden;
     }
 
      .viking-wave {
@@ -49,11 +103,12 @@
        background: transparent;
        height: 100px;
        width: 1000px;
+       transition: top 10s;
      }
 
      .viking-scene:hover .viking-wave {
        top: 170px;
-       transition: top 5s;
+       transition: top 5s ease-in-out;
      }
 
      .top-wave {
@@ -64,11 +119,12 @@
        width: 1000px;
        position: absolute;
        top: 190px;
+       transition: top 10s;
      }
 
      .viking-scene:hover .top-wave{
-       top: 160px;
-       transition: top 5s;
+       top: 175px;
+       transition: top 10s ease-in-out;
 
      }
 
@@ -79,11 +135,13 @@
        width: 400px;
        top: 40px;
        left: -300px;
+       transition: left 20s, top 20s, transform 20s;
      }
 
      .viking-scene:hover .boat{
-       left: 600px;
-       transition: left 20s;
+       left: 200px;
+       transform: rotate(-25deg);
+       transition: left 20s, top 20s, transform 20s, ease-in-out;
      }
 
 
@@ -102,15 +160,24 @@
 <button> See All Questions </button>
 </a> -->
 <section class="header">
-  Header
+  <ul class="nav">
+    <li>ASK <br> - A - <br>QUESTION</li>
+    <li>ANSWER<br> - A - <br>QUESTION</li>
+    <li>QUESTION <br> DATABASE</li>
+  </ul>
 </section>
 
 <section class= "main">
-main
+  <h1><em>N</em>ORTHEAST <br> <em>P</em>ACIFIC <em>E</em>DIBLE <br><em>S</em>EAWEED <em>A</em>QUACULTURE</h1>
   <section class="sidebar-left">
+    <ul>
+    <li>MISSION</li>
+    </ul>
   </section>
   <section class="sidebar-right">
-
+    <ul>
+  <li>RESOURCE</li>
+</ul>
   </section>
 </section>
 
