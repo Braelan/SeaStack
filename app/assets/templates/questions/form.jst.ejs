@@ -9,6 +9,7 @@ look into the error messages from fetch. -->
   <link rel="stylesheet" <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
+    <script type="text/javascript" src="//api.filepicker.io/v2/filepicker.js"></script>
     <section class="new-question-body group">
   <div class="new-question" >
     <h1> </h1>
@@ -19,6 +20,12 @@ look into the error messages from fetch. -->
     <br>
     <textarea class="q-body"name="body" id="body"></textarea>
     <br>
+
+    <input name="filepicker_url" type="filepicker" data-fp-apikey="A89nvdnFdRBuoijDIiuvyz"
+     onchange="alert(event.fpfile.url)"
+
+
+    <br>
     <label for="tags">Tags</label>
     <input type= "text" name="tags" id="tags">
     <br>
@@ -28,7 +35,7 @@ look into the error messages from fetch. -->
     <br>
     <br>
     <a>
-    <button type="submit">Post Question</button>
+    <button class="post-question" type="submit">Post Question</button>
     </a>
   </div>
   <div class="question-comments">

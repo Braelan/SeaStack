@@ -21,6 +21,9 @@
 <br>
 <h2> <%= question.escape("body") %> </h2>
 <br>
+<img src="<%= question.escape("filepicker_url") %>"> </img>
+<br>
+<br>
 <h2> Comments: </h2>
   <% question.comments().each( function(comment) {%>
   <%= comment.escape("body") %>

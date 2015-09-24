@@ -2,7 +2,7 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
  template: JST['questions/form'],
  tagName: "form",
 
- events: {"click button" : "submit"},
+ events: {"click .post-question" : "submit"},
 
  initialize: function (options) {
    this.model = options.model
@@ -18,6 +18,7 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
    event.preventDefault()
    var attrs = this.$el.serializeJSON();
    var that = this;
+   debugger
    this.model.set(attrs)
    this.model.save({}, {
    success: function() {

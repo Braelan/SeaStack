@@ -6,6 +6,7 @@ json.extract! @question,
 :body,
 :user_id,
 :upvotes,
+:filepicker_url,
 :created_at,
 :updated_at,
 :response_notification

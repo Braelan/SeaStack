@@ -43,7 +43,7 @@ class Api::QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:title, :body)
+    params.require(:question).permit(:title, :body, :filepicker_url)
   end
 
   def tag_params
