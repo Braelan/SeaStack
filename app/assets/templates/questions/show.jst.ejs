@@ -21,12 +21,14 @@
 <br>
 <h2> <%= question.escape("body") %> </h2>
 <br>
+<% if (question.escape("filepicker_url").includes("https")) { %>
 <img src="<%= question.escape("filepicker_url") %>"> </img>
+<% } %>
 <br>
 <br>
 <h2> Comments: </h2>
   <% question.comments().each( function(comment) {%>
-  <%= comment.escape("body") %>
+  <%= comment.escape("body") %> <br>
   <% }); %>
 
   <h1>Answer:</h1>

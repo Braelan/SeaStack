@@ -26,6 +26,7 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
    },
     error: function (model, response) {
       console.log(response.responseText)
+      window.alert("You have to sign up or sign in to submit questions, answers and comments.")
     }
    });
  }

@@ -33,8 +33,9 @@ SeaStack.Views.CommentForm = Backbone.View.extend({
        that.collection.add(that.model, {merge: true})
      },
      error: function (model, response) {
-       console.log(response.responseText)
-     }
+     console.log(response.responseText)
+     window.alert("You have to sign in to submit questions, answers and comments.")
+   }
    });
  }
 
