@@ -8,7 +8,7 @@ window.SeaStack = {
     SeaStack.questions = new SeaStack.Collections.Questions();
     SeaStack.questions.fetch({
       success: function() {
-        console.log("fetched")
+
       },
       error: function() {
         console.log("fail")
