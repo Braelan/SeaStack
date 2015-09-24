@@ -11,7 +11,6 @@ SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    console.log(this.collection.length)
     var view = this.template({question: this.model})
     this.$el.html(view);
     this.addAnswerForm();

@@ -18,7 +18,7 @@
 }
 
 .new-question > input[type="text"] {
-  font-family: sans-serif;
+  font-family: "Oswald";
   font-size: 20px;
   border: 1px solid #CCCCCC;
   height: 34px;
@@ -31,7 +31,9 @@
 }
 
 .new-question > .q-body {
-  font-size: 16px;
+  font-family: "Ubuntu Mono";
+  color: #444444;
+  font-size: 18px;
   height: 270px;
   width: 660px;
   border: 1px solid #CCCCCC;
