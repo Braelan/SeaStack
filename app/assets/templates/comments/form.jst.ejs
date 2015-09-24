@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Mono' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+<div class="answer-form">
+     <input type="hidden"
+      name="question_id"
+      value="<%= question.escape("id") %>">
+    <label for="Answer">Comment</label>
+    <br>
+    <div class= "comment">
+     <textarea id="Answer"
+     type="text"
+     name="body"
+     value="<%= comment.escape("body") %>">
+   </textarea>
+ </div>
+     <button class="answer">Post Comment</button>
+</div>

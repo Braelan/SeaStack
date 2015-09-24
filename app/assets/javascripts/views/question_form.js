@@ -18,7 +18,6 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
    event.preventDefault()
    var attrs = this.$el.serializeJSON();
    var that = this;
-   debugger
    this.model.set(attrs)
    this.model.save({}, {
    success: function() {

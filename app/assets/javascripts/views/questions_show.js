@@ -7,6 +7,7 @@ SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
     this.listenTo(this.model, "sync", this.render)
     this.listenTo(this.collection, "sync", this.render)
      this.listenTo(this.model.answers(), "sync", this.render)
+     this.listenTo(this.model.comments(), "sync", this.render)
   },
 
   render: function () {
@@ -14,6 +15,7 @@ SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
     var view = this.template({question: this.model})
     this.$el.html(view);
     this.addAnswerForm();
+    this.addCommentForm();
     return this;
   },
 
@@ -23,6 +25,11 @@ SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
     this.addSubview(".answerForm", answerForm )
   },
 
+  addCommentForm: function () {
+    var blankComment = new SeaStack.Models.Comment();
+    var commentForm = new SeaStack.Views.CommentForm({question: this.model, comment: blankComment, collection: this.model.comments()});
+    this.addSubview(".commentForm", commentForm);
+  }
 
 
 
