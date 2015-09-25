@@ -93,3 +93,36 @@
   display: block;
   border-bottom: 1px solid #E5E5E5;
 }
+.hide {
+  display: none;
+}
+
+.on {
+  display: block;
+  position: fixed;
+  top: 200px;
+  left: 200px;
+  width: 100px;
+  height: 200px;
+  font-size: 19;
+  background: gray;
+  color: white;
+  opacity: .6;
+  border-radius: 5px;
+}
+.remind {
+  text-align: center;
+  padding: 10px;
+  display: none;
+  color: blue;
+}
+.on > .remind {
+  display: block;
+  border-radius: 5px;
+}
+
+.on > .ok {
+  background: blue;
+  margin: auto;
+  color: white;
+}

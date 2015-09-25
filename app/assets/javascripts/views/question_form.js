@@ -2,7 +2,11 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
  template: JST['questions/form'],
  tagName: "form",
 
- events: {"click .post-question" : "submit"},
+ events: {"click .post-question" : "submit",
+          "click .remind" : "close"
+
+       },
+
 
  initialize: function (options) {
    this.model = options.model
@@ -12,6 +16,10 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
    var formView = this.template({question: this.model});
    this.$el.html(formView);
    return this;
+ },
+
+ close: function () {
+   $('div.reminder').toggleClass('on')
  },
 
  submit: function (event) {
@@ -26,7 +34,7 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
    },
     error: function (model, response) {
       console.log(response.responseText)
-      window.alert("You have to sign up or sign in to submit questions, answers and comments.")
+      $('div.reminder').toggleClass('on')
     }
    });
  }
