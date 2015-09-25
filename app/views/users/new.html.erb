@@ -15,7 +15,7 @@
 
 
   <div class="Sea-title">
-<h1> Sea<em>Stack</em> </h1>
+<h1> Sea<em>Stack</em></h1>
 <h2> Grow Great Algae. <h2>
 </div>
 
@@ -25,10 +25,11 @@
 
   <% if flash.now[:errors] %>
     <% flash.now[:errors].each do |error| %>
-      <%= error %> <br/>
-      <% end %>
-      <% end %>
-
+          <%= error %> <br/>
+    <% end %>
+  <% end %>
+<i class="exp">
+</i>
 
 <form class="input" action= "<%= users_url %>" method="post">
   <input type="hidden"
@@ -55,9 +56,16 @@
    <label for="user_password">Password</label>
    <br>
    <input
+     class="expo"
      type="password"
      name="user[password]"
      id="user_password">
+    <i class="pinfo">
+       Password must contain at least 6 characters
+        <br>
+         <li>no other restrictions</li>
+    </i>
+  </input>
      <br>
 
    <label for="user_password">Password Confirmation</label>

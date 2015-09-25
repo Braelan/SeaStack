@@ -152,36 +152,21 @@ body > .account > a:hover {
   float: left;
 }
 
+.pinfo {
+  display: none;
+}
+
+ .sign-up > .input > .expo:focus + .pinfo{
+   position: absolute;
+   display: block;
+   color: white ;
+   background: #4479DD;
+   width: 280px;
+   margin: -15px 270px;
+   padding: 25px 50px 15px 15px;
+   font-size: 13px;
+  //  font-weight: bold;
+   list-style-type: disc
 
 
-
-//
-// .input {
-//   margin: 20px 0;
-// }
-//
-// .input > label {
-//   display: block;
-//   font-weight: bold;
-// }
-//
-// .input > input {
-//   display: block;
-//   border: 2px solid red;
-//   padding: 5px;
-//   width: 100px;
-//   border-radius: 5px;
-// }
-//
-// input >input:focus {
-//   border-color: #0c0;
-// }
-//
-//
-//
-// h1 {
-//
-//   display: block;
-//   width: 100%;
-//   margin: auto;
-// }
+}
