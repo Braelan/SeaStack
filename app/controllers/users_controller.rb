@@ -21,6 +21,17 @@ class UsersController < ApplicationController
 
       end
       flash.now[:errors] = flash.now[:errors] ? flash.now[:errors] : @user.errors.full_messages
+      # send variables that can be used by erb template
+       if flash.now[:errors]
+        flash.now[:errors].each do |error|
+              if error.include? "Email"
+                 @emails = "Email cannot be empty."
+               end
+               if error.include? "Password"
+                 @passwords = "Password cannot be empty."
+               end
+          end
+        end
       render :new
     end
   end

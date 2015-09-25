@@ -157,6 +157,7 @@ body > .account > a:hover {
 }
 
  .sign-up > .input > .expo:focus + .pinfo{
+   z-index: 2;
    position: absolute;
    display: block;
    color: white ;
@@ -166,7 +167,19 @@ body > .account > a:hover {
    padding: 25px 50px 15px 15px;
    font-size: 13px;
   //  font-weight: bold;
-   list-style-type: disc
+   list-style-type: disc;
+}
 
-
+.sign-up > .input > .error {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  color: white ;
+  background: #CD5655;
+  margin: -15px 270px;
+  padding: 15px;
+  width: 160px;
+  font-size: 13px;
+ //  font-weight: bold;
+  list-style-type: disc;
 }

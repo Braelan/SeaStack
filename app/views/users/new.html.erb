@@ -22,13 +22,8 @@
 <section class="divide">
 
 </section>
-
-  <% if flash.now[:errors] %>
-    <% flash.now[:errors].each do |error| %>
-          <%= error %> <br/>
-    <% end %>
-  <% end %>
 <i class="exp">
+
 </i>
 
 <form class="input" action= "<%= users_url %>" method="post">
@@ -50,7 +45,13 @@
      type="text"
      name="user[email]"
      id="user_email"
+     class= ".errors"
      value="">
+      <% if @emails %>
+       <i class="error" >
+       <%= @emails %>
+    </i>
+    <% end %>
    <br>
 
    <label for="user_password">Password</label>
@@ -60,11 +61,17 @@
      type="password"
      name="user[password]"
      id="user_password">
+
     <i class="pinfo">
        Password must contain at least 6 characters
         <br>
          <li>no other restrictions</li>
     </i>
+      <% if @passwords %>
+         <i class="error" >
+         <%= @passwords %>
+      </i>
+       <% end %>
   </input>
      <br>
 
