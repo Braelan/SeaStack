@@ -8,7 +8,7 @@ window.SeaStack = {
     SeaStack.questions = new SeaStack.Collections.Questions();
     SeaStack.questions.fetch({
       success: function() {
-        console.log("fetched") // nice to see if it is fetching
+        // console.log("fetched") // nice to see if it is fetching
       },
       error: function() {
         console.log("fail")
@@ -21,3 +21,4 @@ window.SeaStack = {
   }
 
 };
+//Initialize SeaStack is moved to Views/site/root.
