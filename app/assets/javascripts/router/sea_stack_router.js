@@ -1,9 +1,9 @@
 SeaStack.Routers.Router = Backbone.Router.extend({
   routes: {
+    "": "splash",
     "questions" : "index",
     "questions/new" : "new",
-    "questions/:id" : "show",
-    "": "splash"
+    "questions/:id" : "show"
   },
 
   initialize: function(options) {

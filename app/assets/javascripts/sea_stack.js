@@ -21,6 +21,3 @@ window.SeaStack = {
   }
 
 };
-$(document).ready(function(){
-  SeaStack.initialize();
-});
