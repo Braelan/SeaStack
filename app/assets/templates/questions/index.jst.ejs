@@ -1,5 +1,22 @@
+<body class="index">
+<div>
+<section class="cloud-scene group">
+  <img src="sky.png" class="skybacking">
+  <div class="sky">
+    <ul class="clouds">
+      <img src="wisps.png" class="cloud1"></img>
+      <img src="cloud1.png" class="cloud2"></img>
+      <img src="cloud2.png" class="cloud3"></img>
+      <img src="wisps.png" class="cloud4"></img>
+      <img src="cloud1.png" class="cloud5"></img>
+    </ul>
+  </div>
+</section>
+
+
 <% questions.each( function(question) { %>
 <a href="#questions/<%= question.escape('id')%>"><%= question.escape('title')  %></a> <br>
 <%= question.escape('body') %>
 <br><br>
 <% }); %>
+</body>

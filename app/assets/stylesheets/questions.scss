@@ -126,3 +126,80 @@
   margin: auto;
   color: white;
 }
+
+
+// index page code
+.cloud-scene {
+  // position: absolute;
+
+  display: block;
+  margin: auto;
+  width: 1000px;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 40px;
+  }
+.cloud-scene > .skybacking {
+  position: absolute;
+  height: 200px;
+  width: 1000px;
+  border-radius: 40px;
+}
+.cloud-scene > .sky {
+  left: 0px;
+  display: block;
+  width: 3000px;
+  background: transparent;
+  height: 200px;
+  animation: nudge 150s linear infinite;
+}
+
+@keyframes nudge {
+  0% {
+    transform: translate(-2000px, 0)
+  }
+  100% {
+    transform: translate(0px, 0)
+  }
+}
+.clouds *{
+  // background: white;
+  // display: block;
+  position: absolute;
+}
+
+.cloud1 {
+  left: 100px;
+  height: 100px;
+  width: 250px;
+  top: 75px;
+}
+
+.cloud2 {
+  left: 450px;
+  width: 350px;
+  height: 150px;
+  top: 25px;
+}
+
+.cloud3 {
+
+  left: 1100px;
+  width: 800px;
+  height: 87px;
+  top: 19px;
+}
+
+.cloud4 {
+  left: 2100px;
+  height: 100px;
+  width: 250px;
+  top: 75px;
+}
+
+.cloud5 {
+  left: 2450px;
+  width: 350px;
+  height: 150px;
+  top: 25px;
+}
