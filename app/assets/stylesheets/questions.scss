@@ -169,8 +169,17 @@
   height: 100px;
   width: 300px;
   margin: 0 0 0 120px;
-  transition: max-height 1s, ease;
+  opacity: 1;
+  transition: height .7s, opacity 1s, ease;
 }
 p {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.index-item > a:hover{
+  color: #5dd0fe;
 }
