@@ -1,5 +1,16 @@
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<i>
+</i>
+<div class="index">
 <% questions.each( function(question) { %>
-<a href="#questions/<%= question.escape('id')%>"><%= question.escape('title')  %></a> <br>
-<%= question.escape('body') %>
-<br><br>
+  <section class="index-item">
+<a href="#questions/<%= question.escape('id')%>"><%= question.escape('title')  %></a>
+  </section>
+  <p><%= question.escape('body') %></p>
 <% }); %>
+
+</div>
