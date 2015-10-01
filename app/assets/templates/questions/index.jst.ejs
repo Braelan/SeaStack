@@ -1,11 +1,29 @@
 
 
 
+
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 <i>
 </i>
 <div class="index">
+<body class="index">
+<div>
+<section class="cloud-scene group">
+  <img src="sky.png" class="skybacking">
+  <div class="sky">
+    <ul class="clouds">
+      <img src="wisps.png" class="cloud1"></img>
+      <img src="cloud1.png" class="cloud2"></img>
+      <img src="cloud2.png" class="cloud3"></img>
+      <img src="wisps.png" class="cloud4"></img>
+      <img src="cloud1.png" class="cloud5"></img>
+    </ul>
+  </div>
+</section>
+
+
+
 <% questions.each( function(question) { %>
   <section class="index-item">
 <a href="#questions/<%= question.escape('id')%>"><%= question.escape('title')  %></a>
@@ -13,4 +31,7 @@
   <p><%= question.escape('body') %></p>
 <% }); %>
 
+
 </div>
+
+</body>
