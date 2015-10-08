@@ -1,4 +1,7 @@
-<h1> Login <h1>
+<html>
+<body class="sign-up">
+
+<h1> Login </h1>
 
   <% if flash.now[:errors] %>
     <% flash.now[:errors].each do |error|%>
@@ -6,7 +9,7 @@
       <% end %>
     <% end %>
 
-<form action="<%= session_url %>" method="post">
+<form class="input" id="login" action="<%= session_url %>" method="post">
   <input type="hidden"
    name="authenticity_token"
    value=" <%= form_authenticity_token %>">
@@ -22,7 +25,11 @@
     type="password"
     name="user[password]"
     id="user_password">
-  <input type="submit">
+  <div>
+    <input type="submit">
+  </div>
 </form>
 
 <%= link_to "Sign up!", new_user_url %>
+</body>
+<html>
