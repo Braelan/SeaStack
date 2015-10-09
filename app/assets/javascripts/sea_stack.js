@@ -15,10 +15,11 @@ window.SeaStack = {
       }
     }
     );
+    console.log("wow")
      // this puts html into App/Views/site/root
     new SeaStack.Routers.Router({$rootEl: $("div")});
     Backbone.history.stop();
-    Backbone.history.start(); 
+    Backbone.history.start();
   }
 
 };

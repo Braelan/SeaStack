@@ -123,12 +123,23 @@
 .on > .remind {
   display: block;
   border-radius: 5px;
+  color: white;
+}
+.on > p {
+  opacity: 1;
+  display: block;
+  height: 100px;
+  width: 80px;
+  color: white;
 }
 
 .on > .ok {
+  position: relative;
+  bottom: -150px;
   background: blue;
   margin: auto;
   color: white;
+  display: block;
 }
 
 // index styles
