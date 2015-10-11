@@ -21,7 +21,7 @@
 <br>
 <h2> <%= question.escape("body") %> </h2>
 <br>
-<% if (question.escape("filepicker_url").includes("https")) { %>
+<% if (question.escape("filepicker_url").slice(0,5) === "https") { %>
 <img src="<%= question.escape("filepicker_url") %>"> </img>
 <% } %>
 <br>
