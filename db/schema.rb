@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924130926) do
+ActiveRecord::Schema.define(version: 20151022180130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 20150924130926) do
     t.string   "title",                 null: false
     t.text     "body",                  null: false
     t.integer  "user_id",               null: false
-    t.integer  "upvotes"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.boolean  "response_notification"
@@ -66,6 +65,16 @@ ActiveRecord::Schema.define(version: 20150924130926) do
 
   add_index "tags", ["category"], name: "index_tags_on_category", using: :btree
   add_index "tags", ["question_id"], name: "index_tags_on_question_id", using: :btree
+
+  create_table "upvotes", force: :cascade do |t|
+    t.integer  "question_id"
+    t.integer  "user_id",     null: false
+    t.integer  "answer_id"
+    t.integer  "comment_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.boolean  "value"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            null: false
