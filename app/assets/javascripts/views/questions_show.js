@@ -1,5 +1,7 @@
 SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
   template: JST["questions/show"],
+
+  
   initialize: function (options) {
     //model is a question
     this.model = options.model;

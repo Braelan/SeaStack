@@ -24,8 +24,6 @@ json.answers do
   end
 end
   # upvote would be better named vote because it can be up or down.
-
-json.votes do
   count = 0
   @question.upvotes.each do |vote|
       if vote.value == false
@@ -36,6 +34,5 @@ json.votes do
         count +=1
       end
     end
-    total_count = {count: count}
-    json.extract! total_count, :count
-  end
+
+json.set! :votes, count

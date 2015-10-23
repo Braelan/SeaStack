@@ -24,7 +24,14 @@ SeaStack.Models.Question = Backbone.Model.extend({
     this._answers = this._answers ||
     new SeaStack.Collections.Answers([],{question: this})
     return this._answers;
+  },
+
+  upvotes: function () {
+    //parse upvotes
+    this._upvotes = this._upvote
+
   }
+
 
 
 });
