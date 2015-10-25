@@ -1,0 +1,3 @@
+SeaStack.Models.Answer = Backbone.Model.extend({
+  urlRoot: "/api/upvotes"
+})

@@ -1,15 +1,14 @@
-class Api::UpvortesController < ApplicationController
+class Api::UpvotesController < ApplicationController
   def new
     @upvote = Upvote.new
   end
 
   def create
-    @upvote = Upvote.new(upvote_params)
-
+    @upvote = current_user.upvotes.find_or_initialize_by(question_id: params[:upvote][:question_id])
     if signed_in?
        @upvote.user_id = current_user.id;
-         @upvote.save
-         flash.now[:errors] = @answer.errors.full_messages
+         @upvote.update(upvote_params)
+         flash.now[:errors] = @upvote.errors.full_messages
          render json: @upvote
     end
   end
@@ -17,6 +16,6 @@ class Api::UpvortesController < ApplicationController
   private
 
   def upvote_params
-    params.require(:upvote).permit(:question_id, :comment_id, :answer_id, :value, :user_id)
-
+    params.require(:upvote).permit(:question_id, :comment_id, :answer_id, :value)
+  end
 end

@@ -16,8 +16,16 @@
 
 <br>
 <h1>
-<button class="up">UP</button>
-<button class="down">DOWN</button>
+<form id="upvote">
+  <input type="hidden" name="question_id" value="<%= question.escape("id") %>">
+  <input type="hidden" name="value" value="<%= true %>">
+  <button class="vote">UP</button>
+</form>
+<form id="downvote">
+  <button class="vote">DOWN</button>
+  <input type="hidden" name="question_id" value="<%= question.escape("id") %>">
+  <input type="hidden" name="value" value="<%= false %>">
+</form>
 <%= question.escape("votes") %>
 <%= question.escape("title") %>
 </h1>

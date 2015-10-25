@@ -161,13 +161,13 @@
 
 .index-item {
   z-index: 5;
-  margin: 20px;
+  margin: 20px 0;
   border-top: 1px solid #E0E0E0;
   border-bottom: 1px solid #E0E0E0;
   width: 500px;
   max-height: 58px;
   overflow: hidden;
-  transition: max-height .2s, ease-out;
+  transition: max-height .2s, ease;
 }
 
 .index-item:hover {
@@ -181,11 +181,12 @@
   z-index: 500;
   background: black;
   color: white;
-  height: 100px;
+  height: auto;
+  max-height: 100px;
   width: 300px;
-  margin: 0 0 0 120px;
+  margin: -19px 0 0 120px;
   opacity: 1;
-  transition: height .7s, opacity .5s, ease;
+  transition: opacity .7s, ease-in;
 }
 p {
   position: absolute;

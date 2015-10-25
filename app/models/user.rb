@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   validates :name, :email,:password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :session_token, :name, :email, uniqueness: true
+  has_many :upvotes
 
   def self.find_by_credentials(email, password)
     user=User.find_by(email: email)

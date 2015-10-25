@@ -1,7 +1,10 @@
 SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
   template: JST["questions/show"],
 
-  
+  events: { "click #upvote": "vote",
+            "click #downvote": "vote"
+  },
+
   initialize: function (options) {
     //model is a question
     this.model = options.model;
@@ -30,6 +33,26 @@ SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
     var blankComment = new SeaStack.Models.Comment();
     var commentForm = new SeaStack.Views.CommentForm({question: this.model, comment: blankComment, collection: this.model.comments()});
     this.addSubview(".commentForm", commentForm);
+  },
+
+  vote: function (event) {
+    event.preventDefault();
+    var attrs = $('#upvote').serializeJSON();
+    if (event.toElement.outerText === "DOWN") {
+      attrs = $('#downvote').serializeJSON();
+    }
+    var that = this;
+    var vote = new SeaStack.Models.Upvote();
+    vote.set(attrs);
+    vote.save({}, {
+      success: function(){
+        that.model.fetch();
+      },
+      error: function(model, response) {
+        console.log(response.responseText)
+      }
+    });
+
   }
 
 

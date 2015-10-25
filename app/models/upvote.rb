@@ -6,4 +6,6 @@ class Upvote < ActiveRecord::Base
     :foreign_key => :question_id,
     :primary_key => :id
   )
+
+  belongs_to :user
 end
