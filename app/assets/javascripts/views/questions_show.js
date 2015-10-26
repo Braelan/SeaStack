@@ -50,6 +50,7 @@ SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
       },
       error: function(model, response) {
         console.log(response.responseText)
+        window.alert("Please Login to Vote.")
       }
     });
 

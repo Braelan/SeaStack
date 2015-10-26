@@ -4,8 +4,8 @@ class Api::UpvotesController < ApplicationController
   end
 
   def create
-    @upvote = current_user.upvotes.find_or_initialize_by(question_id: params[:upvote][:question_id])
     if signed_in?
+    @upvote = current_user.upvotes.find_or_initialize_by(question_id: params[:upvote][:question_id])
        @upvote.user_id = current_user.id;
          @upvote.update(upvote_params)
          flash.now[:errors] = @upvote.errors.full_messages
