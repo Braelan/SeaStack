@@ -38,7 +38,7 @@ SeaStack.Views.QuestionShow = Backbone.CompositeView.extend({
   vote: function (event) {
     event.preventDefault();
     var attrs = $('#upvote').serializeJSON();
-    if (event.toElement.outerText === "DOWN") {
+    if (event.toElement.outerText === "DN") {
       attrs = $('#downvote').serializeJSON();
     }
     var that = this;

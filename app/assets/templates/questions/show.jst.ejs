@@ -17,7 +17,7 @@
 <br>
 <h1 class="question-titles">
   <form id="downvote">
-    <button class="dvote">DOWN</button>
+    <button class="dvote">DN</button>
     <input type="hidden" name="question_id" value="<%= question.escape("id") %>">
     <input type="hidden" name="value" value="<%= false %>">
   </form>
@@ -27,7 +27,7 @@
     <button class="uvote">UP</button>
   </form>
 
-<em class="votes"> <%= question.escape("votes") %> </em>
+<em class="votes"> <%= question.escape("votes")%> </em>
 <%= question.escape("title") %>
 </h1>
 <br>
