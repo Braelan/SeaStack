@@ -47,7 +47,7 @@
   <h1>Answers:</h1>
   <i class= "answers">
     <% question.answers().each( function(answer) {%>
-    <p class=answer> <%= answer.escape("body") %> </p><br>
+    <a class=answer_link href="<%=answer.escape("link_url")%>"> <%= answer.escape("body") %> </a><br>
     <% }); %>
   </i>
 <br>

@@ -20,7 +20,7 @@ end
 
 json.answers do
   json.array! @answers do |answer|
-    json.extract! answer, :id, :body, :upvotes, :user_id
+    json.extract! answer, :id, :body, :upvotes, :user_id, :link_url
   end
 end
   # upvote would be better named vote because it can be up or down.
