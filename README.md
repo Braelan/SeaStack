@@ -18,7 +18,7 @@ Stack Overflow Clone is a clone of Stack Overflow built on Rails and Backbone. U
 - [ ] upvote answers
 - [ ] make questions searchable
 - [ ] Add special user priveledges if benchmarks are reached
-- [ ]
+- [ ] wow
 
 ## Design Docs
 * [View Wireframes][views]
