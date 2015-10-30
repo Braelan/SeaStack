@@ -1,10 +1,11 @@
 class Api::AnswersController < ApplicationController
 
   def create
-   
+    # add https if the user doesn't put it on the front
    @answer = Answer.new(answer_params)
    @answer.user_id = current_user.id
    @answer.save
+
    flash.now[:errors] = @answer.errors.full_messages
    render :show
   end

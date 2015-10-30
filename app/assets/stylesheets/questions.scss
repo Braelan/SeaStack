@@ -78,7 +78,6 @@
 }
 
 .questions-show > i {
-  display: block;
 
 }
 
@@ -88,16 +87,23 @@
   width: auto;
 
 }
+.questions-show > h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
 
 .questions-show > i > i > p {
-  display: block;
+  display:block;
   border-bottom: 1px solid #E5E5E5;
   position: relative;
   opacity: 1;
   height: auto;
   width: auto;
 }
-
+.answer_link {
+  display:block;
+  border-bottom: 1px solid #E5E5E5;
+}
 .answer_link:hover {
   color: #3E5FFF;
 }

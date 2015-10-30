@@ -23,13 +23,21 @@ SeaStack.Views.AnswerForm = Backbone.View.extend({
     this.$el.html(view);
     return this;
   },
+  // add http if user doesn't
+  check_string: function(string) {
+    if (string && (string.trim().length > 0) && !string.includes("http")) {
+      return "https://".concat(string.trim());
+    }
+    return string.trim();
+  },
 
   submit: function(event) {
     event.preventDefault();
     var attrs = this.$el.serializeJSON();
+    attrs.link_url = this.check_string(attrs.link_url)
     var that = this;
-   this.model.set(attrs);
-   this.model.save({}, {
+    this.model.set(attrs);
+    this.model.save({}, {
       success: function () {
         that.collection.add(that.model, {merge:true})
       },

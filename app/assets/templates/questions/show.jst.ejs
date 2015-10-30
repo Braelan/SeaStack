@@ -31,24 +31,30 @@
 <%= question.escape("title") %>
 </h1>
 <br>
+<br>
 <h2> <%= question.escape("body") %> </h2>
 <br>
 <% if (question.escape("filepicker_url").slice(0,5) === "https") { %>
 <img src="<%= question.escape("filepicker_url") %>"> </img>
 <% } %>
-<br>
-<br>
+
   <i class= "answers">
-<h2> Comments: </h2>
-  <% question.comments().each( function(comment) {%>
-  <%= comment.escape("body") %> <br>
-  <% }); %>
+
 
   <h1>Answers:</h1>
   <i class= "answers">
     <% question.answers().each( function(answer) {%>
+      <% if (answer.escape("link_url").length > 0) { %>
     <a class=answer_link href="<%=answer.escape("link_url")%>"> <%= answer.escape("body") %> </a><br>
+      <% } else { %>
+      <p>  <%=answer.escape("body")%> </p><br>
+        <%} %>
     <% }); %>
+
+    <h2> Comments: </h2>
+      <% question.comments().each( function(comment) {%>
+      <%= comment.escape("body") %> <br>
+      <% }); %>
   </i>
 <br>
 <p></p>

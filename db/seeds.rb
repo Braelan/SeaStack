@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Question.create!(title: "Where is seaweed grown commercially/ how developed is the industry?",
-                 body: "please provide information on type, conditions and market where available", user_id: 1)
-Answer.create!(body: "This is a link to Growing Australian Seaweed Aquaculture",
+                 body: "Please provide information on type, conditions and market where available", user_id: 1)
+Answer.create!(body: "Growing Australian Seaweed Aquaculture",
                    user_id: 1, question_id: 1, link_url:"http://algaeasia.com/2014/09/seaweed-farming-australias-next-aquaculture-industry/")
     Answer.create!(body: "Kelp For Farmers: Seaweed Becomes A New Crop In America",
                    user_id: 1, question_id: 1, link_url: "http://www.npr.org/blogs/thesalt/2012/10/12/162728509/kelp-for-farmers-seaweed-becomes-a-new-crop-in-america")
