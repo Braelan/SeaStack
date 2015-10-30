@@ -1,6 +1,7 @@
 class Api::AnswersController < ApplicationController
 
   def create
+   
    @answer = Answer.new(answer_params)
    @answer.user_id = current_user.id
    @answer.save
@@ -16,7 +17,7 @@ class Api::AnswersController < ApplicationController
   private
 
   def answer_params
-    params.require(:answer).permit(:body, :question_id)
+    params.require(:answer).permit(:body, :question_id, :link_url)
   end
 
 end
