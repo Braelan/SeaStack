@@ -7,6 +7,7 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
   },
 
   render: function () {
+    this.collection.sort();
     var view = this.template({questions: this.collection});
     this.$el.html(view);
     return this;

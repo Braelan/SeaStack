@@ -17,6 +17,10 @@ SeaStack.Collections.Questions = Backbone.Collection.extend({
       question.fetch();
     }
     return question
+  },
+
+  comparator: function(model) {
+    return -(model.attributes.upvotes.length)
   }
 
 });
