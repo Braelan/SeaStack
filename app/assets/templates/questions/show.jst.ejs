@@ -17,14 +17,17 @@
 <br>
 <h1 class="question-titles">
   <form id="downvote">
-    <button class="dvote">DN</button>
+
     <input type="hidden" name="question_id" value="<%= question.escape("id") %>">
     <input type="hidden" name="value" value="<%= false %>">
+
+    <input class="dvote" id="downvote" type="image" src="arrow-down.svg" alt="Submit">
   </form>
   <form id="upvote">
     <input type="hidden" name="question_id" value="<%= question.escape("id") %>">
     <input type="hidden" name="value" value="<%= true %>">
-    <button class="uvote">UP</button>
+
+    <input class="uvote" type="image" src="arrow-up.svg" alt="Submit">
   </form>
 
 <em class="votes"> <%= question.escape("votes")%> </em>
