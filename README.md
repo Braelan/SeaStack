@@ -1,4 +1,4 @@
-# Seaweed Industry Site
+# SeaStack
 
 A Forum for discussing the Seaweed Industry inspired by StackOverflows Question
 and Answer Format.
