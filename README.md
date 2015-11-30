@@ -1,14 +1,14 @@
 # SeaStack
 
-A Forum for discussing the Seaweed Industry inspired by StackOverflows Question
-and Answer Format.
+A forum for discussing the seaweed industry inspired by StackOverflows question
+and answer format.
 
 [Heroku link] https://pure-coast-4988.herokuapp.com/#questions
 
 [heroku]: https://pure-coast-4988.herokuapp.com/#questions
 
 ## Features
-  - Question Forum sorted by upvotes
+  - Question forum sorted by upvotes
   - Users can create accounts
   - Post questions, answer questions and comment
   - upload photos
