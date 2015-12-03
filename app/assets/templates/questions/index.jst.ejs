@@ -25,7 +25,21 @@
 
 
 <% questions.each( function(question) { %>
+  <el> <%= question.escape("votes") %>
+       <% if (question.escape("votes") === "1") { %>
+        vote
+      <% } else  {%>
+        votes
+        <% } %>
+        <el>
+     <%= question.escape("answercount") %>
+     <% if (question.escape("answercount") === "1" ) { %>
+       answer
+     <% } else { %>
+     answers
+     <% } %>
   <section class="index-item">
+
 <a href="#questions/<%= question.escape('id')%>"><%= question.escape('title')  %></a>
   </section>
   <p><%= question.escape('body') %></p>
