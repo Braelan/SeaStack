@@ -2,12 +2,14 @@
 
 one:
   body: MyText
+  user_id: 1
   upvotes: 1
   question_id: 1
   answer_id: 1
 
 two:
   body: MyText
+  user_id: 1
   upvotes: 1
   question_id: 1
   answer_id: 1

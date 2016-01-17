@@ -22,27 +22,54 @@
   </div>
 </section>
 
-
+<div class='header'>
+  All Questions
+</div>
 
 <% questions.each( function(question) { %>
-  <el> <%= question.escape("votes") %>
-       <% if (question.escape("votes") === "1") { %>
-        vote
-      <% } else  {%>
-        votes
-        <% } %>
-        <el>
-     <%= question.escape("answercount") %>
-     <% if (question.escape("answercount") === "1" ) { %>
-       answer
-     <% } else { %>
-     answers
-     <% } %>
   <section class="index-item">
+  <div class="index-stats">
+   <el class="index-votes">
+      <el class=index-number>
+        <%= question.escape("votes") %>
+      </el>
+      <el class='index-small'>
+          <% if (question.escape("votes") === "1") { %>
+            vote
+
+          <% } else  {%>
+
+            votes
+
+        <% } %>
+        </el>
+   </el>
+   <el class='index-answers'>
+     <el class='index-number'>
+       <%= question.escape("answercount") %>
+     </el>
+     <el class='index-small'>
+       <% if (question.escape("answercount") === "1" ) { %>
+         answer
+       <% } else { %>
+         answers
+     </el>
+     <% } %>
+   </el>
+  </div>
+<div class="index-question">
+  <div class="index-title">
+
 
 <a href="#questions/<%= question.escape('id')%>"><%= question.escape('title')  %></a>
+  </div>
+  <div class="index-body">
+
+  <%= question.escape('body') %>
+</div>
+</div>
+
   </section>
-  <p><%= question.escape('body') %></p>
 <% }); %>
 
 

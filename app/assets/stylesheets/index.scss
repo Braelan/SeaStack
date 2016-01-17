@@ -1,0 +1,123 @@
+.header {
+  width: 1000px;
+  margin: auto;
+  font-size: 25px;
+  // background: blue;
+  border-bottom: 1px solid #EAEBEC
+}
+
+// index styles
+.index {
+  font-family: 'Roboto';
+}
+
+.index-item {
+  // background: yellow;
+  width: 1000px;
+  height: 120px;
+  margin: auto;
+  display: flex;
+  border-bottom: 1px solid #EAEBEC
+
+}
+.index-small {
+  font-size: 12px;
+  margin: auto;
+}
+.index-question {
+  // background: green;
+  margin: 10px;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-stats {
+  // background: red;
+  margin: 10px;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-answers {
+  display: flex;
+  height: 40px;
+  width: 50px;
+  background: #75845C;
+  color: yellow;
+  flex-direction: column;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.index-votes {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  width: 50px;
+  color: #777777;
+  padding-bottom: 10px;
+}
+
+.index-number{
+  font-size: 25px;
+  margin: auto;
+}
+
+.index-title{
+  // background: black;
+  color: #30A7FC;
+  padding: 5px;
+}
+
+.index-body {
+  // background: gray;
+  padding: 5px;
+  font-size: 14px;
+}
+
+// .index {
+//   // border: 1px solid red;
+//   font-family: 'Roboto';
+//   width: 900px;
+//   margin: auto;
+// }
+.index-item > a {
+  // border: 5px solid yellow;
+  color: #30A7FC;
+}
+//
+// .index-item > p {
+//   // border: 2px solid green;
+// }
+//
+// .index-item {
+//   background: yellow;
+//   z-index: 5;
+//   margin: 20px 0;
+//   border-top: 1px solid #E0E0E0;
+//   border-bottom: 1px solid #E0E0E0;
+//   width: 500px;
+//   max-height: 58px;
+//   overflow: hidden;
+//   transition: max-height .2s, ease;
+// }
+//
+// .index-item:hover {
+//   z-index: 30;
+//   overflow: visible;
+// }
+//
+// .index-item:hover + p {
+//   position: absolute;
+//   display: block;
+//   z-index: 500;
+//   background: black;
+//   color: white;
+//   height: auto;
+//   max-height: 100px;
+//   width: 300px;
+//   margin: -19px 0 0 120px;
+//   opacity: 1;
+//   transition: opacity .7s, ease-in;
+// }
