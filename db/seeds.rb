@@ -5,6 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create!(name: 'Braelan', email: 'bbraelan@gmail.com', password: 'password')
+
 Question.create!(title: "Where is seaweed grown commercially/ how developed is the industry?",
                  body: "Please provide information on type, conditions and market where available", user_id: 1)
 Answer.create!(body: "Growing Australian Seaweed Aquaculture",
@@ -24,11 +26,15 @@ Answer.create!(body: "Growing Australian Seaweed Aquaculture",
                                                 user_id: 1, question_id: 2, link_url: "http://portal.nifa.usda.gov/web/crisprojectpages/1004428-developing-an-environmentally-and-economically-sustainable-sugar-kelp-aquaculture-industry-in-southern-new-england-from-seed-to-market.html")
     Answer.create!(body: "Also look into NOAA seagrants",
                                   user_id: 1, question_id: 2)
+    Tag.create!(category: "Industry", question_id: 1)
+    Tag.create!(category: "Kelp", question_id: 2)
+
     Question.create!(title: "What is the impact of kelp farming on ocean acidification?", body: "scientific articles discussing carbon sequestration", user_id: 1)
      Answer.create!(body: "Article on kelp, photosynthesis, acidification, mentions calcification",
                     user_id: 1, question_id: 3, link_url: "http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0062689")
       Answer.create!(body: "Using marine macroalgae for carbon sequestration: a critical appraisal  Article by Ik Kyo Chung et al.",
                     user_id: 1, question_id: 3, link_url:"http://link.springer.com/article/10.1007%2Fs10811-010-9604-9")
+      Tag.create!(category: 'Acidification', question_id: 2)
 
     Question.create!(title: "Where are good kelp growing manuals?", body: "Please provide links, and brief description", user_id: 1)
     Answer.create!(body: "Irish manuals, economic analysis of mussels and kelp",
@@ -37,6 +43,8 @@ Answer.create!(body: "Growing Australian Seaweed Aquaculture",
                   user_id: 1, question_id: 4, link_url:"http://static.squarespace.com/static/52f23e95e4b0a96c7b53ad7c/t/52f78b0de4b0374e6a0a4da8/1391954701750/OceanApproved_KelpManualLowRez.pdf")
     Answer.create!(body: "Uconn seagrant manual",
                   user_id: 1, question_id: 4, link_url:"http://seagrant.uconn.edu/publications/aquaculture/handbook.pdf")
+    Tag.create!(category: "Kelp", question_id: 3)
+    Tag.create!(category: "Manual", question_id: 3)
 
     Question.create!(title: "Where on the web are great active seaweed sites?", body: "Hopefully up to date and beats a google search", user_id: 1)
     Answer.create!(body:"Algae industry Magazine" , user_id: 1, question_id: 5, link_url:"http://www.algaeindustrymagazine.com/")
@@ -45,6 +53,7 @@ Answer.create!(body: "Growing Australian Seaweed Aquaculture",
     Question.create!(title: "When are seaweed conferences and events?", body: "please post with location", user_id: 1)
     Answer.create!(body: "Algae biomass Summit",
                    user_id: 1, question_id: 6, link_url:"http://www.algaebiomasssummit.org/?page=Sponsor")
+    Tag.create!(category: "Events", question_id: 5)
 
     Question.create!(title: "What are best multitrophic aquaculture practices?", body: "articles and other info", user_id: 1)
     Answer.create!(body: "Chopin article on Research into MTA",
