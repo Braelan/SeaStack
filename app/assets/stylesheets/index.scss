@@ -1,3 +1,5 @@
+$small: 12px;
+
 .index-header {
   width: 1000px;
   margin: auto;
@@ -17,11 +19,12 @@
   height: 120px;
   margin: auto;
   display: flex;
-  border-bottom: 1px solid #EAEBEC
+  border-bottom: 1px solid #EAEBEC;
+  font-family: 'Roboto'
 
 }
 .index-small {
-  font-size: 12px;
+  font-size: $small;
   margin: auto;
 }
 .index-question {
@@ -30,6 +33,7 @@
   order: 2;
   display: flex;
   flex-direction: column;
+  width: 640px;
 }
 
 .index-stats {
@@ -75,49 +79,39 @@
   padding: 5px;
   font-size: 14px;
 }
+.etc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-// .index {
-//   // border: 1px solid red;
-//   font-family: 'Roboto';
-//   width: 900px;
-//   margin: auto;
-// }
+.index-tags {
+  display: flex;
+  margin: 0 5px;
+  // background: orange;
+  flex-direction: row;
+}
+.index-tag {
+  background: #E1ECF4;
+  display: block;
+  margin: 5px;
+  align-self: flex-start;
+  color: #4885BB;
+  padding: 5px;
+  font-size: $small;
+}
+
+.index-user {
+  display: inline-block;
+  // background: red;
+  align-self: flex-end;
+  // height: 100px;
+  text-align: right;
+  color: #777777;
+  font-size: $small;
+}
+
 .index-item > a {
   // border: 5px solid yellow;
   color: #30A7FC;
 }
-//
-// .index-item > p {
-//   // border: 2px solid green;
-// }
-//
-// .index-item {
-//   background: yellow;
-//   z-index: 5;
-//   margin: 20px 0;
-//   border-top: 1px solid #E0E0E0;
-//   border-bottom: 1px solid #E0E0E0;
-//   width: 500px;
-//   max-height: 58px;
-//   overflow: hidden;
-//   transition: max-height .2s, ease;
-// }
-//
-// .index-item:hover {
-//   z-index: 30;
-//   overflow: visible;
-// }
-//
-// .index-item:hover + p {
-//   position: absolute;
-//   display: block;
-//   z-index: 500;
-//   background: black;
-//   color: white;
-//   height: auto;
-//   max-height: 100px;
-//   width: 300px;
-//   margin: -19px 0 0 120px;
-//   opacity: 1;
-//   transition: opacity .7s, ease-in;
-// }

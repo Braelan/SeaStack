@@ -4,7 +4,6 @@ json.(question,
 :body,
 :user_id,
 :upvotes,
-:created_at,
 :updated_at,
 :response_notification)
 json.set! :answercount, question.answers.length
@@ -21,3 +20,27 @@ json.set! :answercount, question.answers.length
     end
 
 json.set! :votes, count
+
+
+
+def taglist(question)
+  taglist = []
+  question.tags.each do |tag|
+    taglist << tag.category
+  end
+  taglist
+end
+
+json.set! :tags, taglist(question)
+
+def author(question)
+  question.user.name
+end
+
+json.set! :author, author(question)
+
+def format_date(question)
+  question.created_at.to_formatted_s(:short)
+end
+
+json.set! :created_at, format_date(question)

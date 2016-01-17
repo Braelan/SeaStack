@@ -59,14 +59,37 @@
   </div>
 <div class="index-question">
   <div class="index-title">
-
-
-<a href="#questions/<%= question.escape('id')%>"><%= question.escape('title')  %></a>
+    <a href="#questions/<%= question.escape('id')%>"><%= question.escape('title')  %></a>
   </div>
   <div class="index-body">
-
   <%= question.escape('body') %>
-</div>
+  </div>
+  <div class="etc">
+
+
+    <div class="index-tags">
+
+      <% var tags =   question.escape('tags').split(',') %>
+      <% if (tags[0].length > 0) { %>
+        <% for( var i = 0; i < tags.length; i ++) { %>
+          <el class="index-tag">
+            <%= tags[i] %>
+          </el>
+        <% }%>
+      <% } %>
+    </div>
+    <div class="index-user">
+      asked
+      <% var date = question.escape('created_at').split(' ') %>
+      <%= date[1] %>
+      '<%= date[0] %>
+       at <%= date[2] %><br>
+      by <%= question.escape('author') %>
+    </div>
+    </div>
+  </div>
+
+
 </div>
 
   </section>

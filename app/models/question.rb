@@ -10,6 +10,8 @@ class Question < ActiveRecord::Base
    :primary_key => :id
   )
 
+  has_many :tags
+  belongs_to :user
 
 
 end
