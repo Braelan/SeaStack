@@ -28,8 +28,11 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
    var that = this;
    this.model.set(attrs)
    this.model.save({}, {
-   success: function() {
-     that.collection.add(that.model, {merge:true})
+   success: function(data) {
+     attrs.question_id = data.id
+     that._sendTag(attrs)
+     that.collection.fetch();
+    //  that.collection.add(that.model, {merge:true})
      Backbone.history.navigate("questions", {trigger: true})
    },
     error: function (model, response) {
@@ -44,7 +47,14 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
 // it will save a tag  ( rigged up for display in the question json partial)
 // do this as part of the success callback
  _sendTag: function(attrs) {
-
+   debugger
+$.ajax({
+  method: 'POST',
+  url: 'api/tags',
+  data: {category: attrs.category, question_id: attrs.question_id},
+  success: function () {console.log('tag Sent')},
+  error: function () {console.log('tag oops')}
+})
 
  }
 

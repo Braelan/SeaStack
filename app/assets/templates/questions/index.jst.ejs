@@ -71,7 +71,7 @@
 
       <% var tags =   question.escape('tags').split(',') %>
       <% if ( tags[0].length > 0) { %>
-        <% for( var i = 0; i < tags.length; i ++) { %>
+        <% for( var i = 0; i < (tags.length) && i < 5 ; i ++) { %>
           <el class="index-tag">
             <%= tags[i] %>
           </el>

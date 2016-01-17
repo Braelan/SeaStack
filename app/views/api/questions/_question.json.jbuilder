@@ -34,7 +34,9 @@ end
 json.set! :tags, taglist(question)
 
 def author(question)
-  question.user.name
+  if question.user
+    return question.user.name
+  end
 end
 
 json.set! :author, author(question)

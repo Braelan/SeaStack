@@ -29,7 +29,7 @@ class Api::QuestionsController < ApplicationController
    if signed_in?
      @question.user_id = current_user.id;
      if @question.save
-       render :show
+       render json: @question
      else
      flash.now[:errors] = @question.errors.full_messages
      render :new
