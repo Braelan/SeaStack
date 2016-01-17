@@ -46,8 +46,6 @@ class Api::QuestionsController < ApplicationController
     params.require(:question).permit(:title, :body, :filepicker_url)
   end
 
-  def tag_params
-    # use to add tags at some point
-  end
+
 
 end

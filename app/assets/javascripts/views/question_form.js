@@ -37,6 +37,15 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
       $('div.reminder').toggleClass('on')
     }
    });
+
+
+ },
+// this will send to contoller tags_controller.rb where
+// it will save a tag  ( rigged up for display in the question json partial)
+// do this as part of the success callback
+ _sendTag: function(attrs) {
+
+
  }
 
 
