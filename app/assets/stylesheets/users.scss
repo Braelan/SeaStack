@@ -21,7 +21,29 @@ display: block;
   margin: 0 0 0 40px;
   padding: 10px;
 }
+.twitter {
+  width: 25px;
+  display: block;
 
+}
+.twitter-link{
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  justify-content: flex-start;
+
+  border-radius: 5px;
+  width: 140px;
+
+  font-size: 15px;
+}
+.twitter-link > el {
+  margin: auto 0;
+  padding: 0 5px 0 5px;
+
+  display: inline-block;
+
+}
 .Sea-title{
   text-align: center;
   font-family: 'Oswald', sans-serif;
@@ -75,7 +97,7 @@ input[type= "submit"] {
   left: 300px;
   top: 200px;
   width: 250px;
-  height:350px;
+  height:400px;
   margin: 10px 0 0 300px;
   margin-left: auto;
   margin-right: auto;

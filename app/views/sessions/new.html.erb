@@ -1,4 +1,4 @@
-<html>  
+<html>
 <body class="sign-up">
 
 <h1> Login </h1>
@@ -10,6 +10,7 @@
     <% end %>
 
 <form class="input" id="login" action="<%= session_url %>" method="post">
+    <a class="twitter-link" href="/auth/twitter"><el>Twitter Sign In</el><img class="twitter" src="/Twitter_bird.svg"/></a><br>
   <input type="hidden"
    name="authenticity_token"
    value=" <%= form_authenticity_token %>">

@@ -18,6 +18,7 @@ resources :users
 resource :session, only: [:new, :create, :destroy]
 resources :instructions, only: [:index]
 
+get 'auth/twitter/callback', to: 'sessions#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

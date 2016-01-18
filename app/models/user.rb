@@ -40,5 +40,18 @@ class User < ActiveRecord::Base
     self.session_token  ||= self.class.generate_session_token
   end
 
+  def self.from_omniauth(auth)
+    where(uid: auth['uid'], provider: auth['provider']).first || create_from_omniauth(auth)
+  end
+
+  def self.create_from_omniauth(auth)
+    create! do |user|
+      user.name = auth['info']['nickname']
+      user.email = auth['info']['email'] || 'email'
+      user.uid = auth['uid']
+      user.provider = auth['provider']
+      user.password = auth['credentials']['secret']
+    end
+  end
 
 end
