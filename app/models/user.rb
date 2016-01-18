@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   attr_reader :password
+  attr_accessor :uid
   after_initialize :ensure_session_token
 
   validates :name, :email,:password_digest, :session_token, presence: true
