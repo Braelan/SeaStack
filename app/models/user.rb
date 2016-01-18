@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_reader :password
   attr_accessor :uid
+  attr_accessor :provider
   after_initialize :ensure_session_token
 
   validates :name, :email,:password_digest, :session_token, presence: true
@@ -42,14 +43,14 @@ class User < ActiveRecord::Base
   end
 
   def self.from_omniauth(auth)
-    where(uid: auth['uid'], provider: auth['provider']).first || create_from_omniauth(auth)
+    where(status: auth['uid'], provider: auth['provider']).first || create_from_omniauth(auth)
   end
 
   def self.create_from_omniauth(auth)
     create! do |user|
       user.name = auth['info']['nickname']
       user.email = auth['info']['email'] || 'email'
-      user.uid = auth['uid']
+      user.status = auth['uid']
       user.provider = auth['provider']
       user.password = auth['credentials']['secret']
     end
