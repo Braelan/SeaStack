@@ -47,7 +47,7 @@ SeaStack.Views.QuestionForm = Backbone.View.extend({
 // it will save a tag  ( rigged up for display in the question json partial)
 // do this as part of the success callback
  _sendTag: function(attrs) {
-   debugger
+
 $.ajax({
   method: 'POST',
   url: 'api/tags',

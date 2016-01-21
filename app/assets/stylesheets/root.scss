@@ -1,3 +1,6 @@
+$links: 24px;
+$logo: 50px;
+
 body {
   background: #eee;
   margin: 0 auto;
@@ -31,6 +34,8 @@ div {
 .logo {
   float: left;
   padding: 10px;
+  font-size: $logo;
+  font-weight: bolder;
 }
 
 .logo:hover {
@@ -44,6 +49,8 @@ div {
 .navigation-tabs > li {
   float: left;
   padding: 10px;
+  font-size: $links;
+  font-weight: bold;
 }
 
 .navigation-tabs > li:hover {
@@ -55,6 +62,7 @@ div {
     width: 900px;
     margin: 0 auto;
     font-family: "Amatic SC";
+    font-size: $links;
 }
 
 .site-navigation >  a {

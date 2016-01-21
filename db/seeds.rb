@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create!(name: 'Braelan', email: 'bbraelan@gmail.com', password: 'password')
+User.create!(name: 'Guest', email: 'guest.com', password: 'password')
 
 Question.create!(title: "Where is seaweed grown commercially/ how developed is the industry?",
                  body: "Please provide information on type, conditions and market where available", user_id: 1)

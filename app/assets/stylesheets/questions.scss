@@ -27,7 +27,7 @@
 }
 
 .new-question > input[type="text"]:focus {
-  padding: 0 0 0 10px;
+  // padding: 0 0 0 10px;
   border: 1px solid #0077CC
 }
 
@@ -38,7 +38,7 @@
   height: 270px;
   width: 660px;
   border: 1px solid #CCCCCC;
-  padding: 11px;
+  // padding: 11px;
 }
 
 .new-question >  a > button[type="submit"] {
@@ -189,7 +189,7 @@ p {
     height: 20px;
     border-radius: 5px;
     padding: 0 2px 0 7px;
-
+    margin: 0 5px 0 0;
   }
 
 
