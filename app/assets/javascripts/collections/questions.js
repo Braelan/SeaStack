@@ -21,6 +21,15 @@ SeaStack.Collections.Questions = Backbone.Collection.extend({
 
   comparator: function(model) {
     return -(model.attributes.upvotes.length)
-  }
+  },
+
+  // comparator: function(model){
+  //   var updates = model.escape('updated_at').split('T')[0];
+  //   var date = updates.split("-");
+  //   debugger
+  //   var total = parseInt(date[0])*10000 + parseInt(date[1])*100 + parseInt(date[2]);
+  //   return -total;
+  // }
+
 
 });
