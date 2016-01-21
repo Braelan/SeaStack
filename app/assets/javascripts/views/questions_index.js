@@ -23,9 +23,11 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
   recent: function() {
     if (this.collection.label !== "recent") {
       this.collection.comparator = function(model){
-        var updates = model.escape('updated_at').split('T')[0];
-        var date = updates.split("-");
-        var total = parseInt(date[0])*10000 + parseInt(date[1])*100 + parseInt(date[2]);
+        var updates = model.escape('updated_at').split('T');
+        var date = updates[0].split("-");
+        var total = parseInt(date[0])*1000000 + parseInt(date[1])*10000 + parseInt(date[2])*1000
+        var time = updates[1].split(":")
+        total = total + parseInt(time[0])*60 + parseInt(time[1])
         return -total;
       }
       this.collection.label = "recent"
