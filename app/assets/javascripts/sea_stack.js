@@ -11,11 +11,10 @@ window.SeaStack = {
         // console.log("fetched") // nice to see if it is fetching
       },
       error: function() {
-        console.log("fail")
+        console.log("failed to fetch collection")
       }
     }
     );
-    console.log("wow")
      // this puts html into App/Views/site/root
     new SeaStack.Routers.Router({$rootEl: $("div")});
     Backbone.history.stop();

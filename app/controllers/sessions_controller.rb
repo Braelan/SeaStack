@@ -18,7 +18,8 @@ class SessionsController < ApplicationController
          )
          if @user
            sign_in(@user)
-           redirect_to users_url
+          #  redirect_to request.referer
+           redirect_to '/#questions'
          else
            flash.now[:errors] = ["invalid username or password."]
            render :new
@@ -39,7 +40,7 @@ class SessionsController < ApplicationController
    private
 
    def session_params
-     params.require(:user).permit(:email, :password)
+     params.require(:user).permit(:email, :password, :url)
    end
 
 
