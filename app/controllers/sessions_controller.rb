@@ -24,6 +24,7 @@ class SessionsController < ApplicationController
            flash.now[:errors] = ["invalid username or password."]
            render :new
          end
+
       end
 
    end
@@ -34,7 +35,7 @@ class SessionsController < ApplicationController
 
    def destroy
      sign_out
-     redirect_to new_session_url
+     redirect_to '/#questions'
    end
 
    private

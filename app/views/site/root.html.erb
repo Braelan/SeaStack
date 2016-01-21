@@ -3,22 +3,38 @@
   <nav class="header-nav group">
   <a href="/#questions">  <h2 class="logo">Sea<em>Stack</em></h2></a>
       <ul class="navigation-tabs group">
+
+      <% if !current_user %>
         <li>
           <form class="input" action="<%= session_url %>" method="post">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
             <input type="hidden" name="user[email]" value="guest.com">
             <input type="hidden" name="user[password]" value="password">
             <input type="hidden" name="user[url]" value="<%= request.fullpath %>">
-            <input type="submit" value="guest signin"></input>
+            <input type="submit" value="guest login"></input>
           </form>
 
         </li>
         <li>
-          <a href="/users/new">sign up</a>
-        </li>
-        <li>
           <a href="/session/new">log in</a>
         </li>
+
+        <% else %>
+        <li>
+          <form class="input" action="<%= "/session" %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="submit" value="Logout: <%= current_user.name %> "></input>
+          </form>
+
+        </li>
+
+        <% end %>
+
+        <li>
+          <a href="/users/new">create account</a>
+        </li>
+
         <!-- <li>help</li> -->
 
       </ul>
