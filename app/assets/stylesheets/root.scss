@@ -44,6 +44,7 @@ div {
 
 .navigation-tabs  {
   float: right;
+  margin: 16px 0 0 0;
 }
 
 .navigation-tabs > li {
@@ -51,6 +52,7 @@ div {
   padding: 10px;
   font-size: $links;
   font-weight: bold;
+
 }
 
 .navigation-tabs > li:hover {
