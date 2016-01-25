@@ -13,8 +13,8 @@ class UsersController < ApplicationController
     if params[:user][:password_confirmation] == user_params[:password] && @user.save
       sign_in(@user)
     #  render json: @user
-      #redirect_to root_url +"/#questions"
-      redirect_to session.delete(:return_to)
+      redirect_to "/#questions"
+      # redirect_to session.delete(:return_to)
     else
       if params[:user][:password_confirmation] != user_params[:password]
          flash.now[:errors] = ["**Passwords do not match**"]
