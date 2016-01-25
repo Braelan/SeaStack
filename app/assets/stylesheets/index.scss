@@ -1,11 +1,32 @@
 $small: 12px;
+$links: 24px;
 
 .index-header {
-
-
   font-size: 25px;
   // background: blue;
+}
 
+.index-header > a {
+  margin: 0 0 0 20px;
+    color: #30A7FC;
+}
+
+
+
+.question-navigation {
+//     width: 900px;
+//     margin: 0 auto;
+    font-family: "Amatic SC";
+    font-size: $links;
+}
+
+.question-navigation >  a {
+  background: #9EA3A9;
+  color: white;
+  margin: 4px;
+  padding: 3px;
+  display: block;
+  float: right;
 }
 
 .select {

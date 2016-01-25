@@ -8,7 +8,7 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
 
   initialize: function (options) {
     this.collection = options.collection;
-    this.collection.label = "votes";
+    this.collection.label = "recent";
     this.listenTo(this.collection, "sync", this.render)
   },
 
