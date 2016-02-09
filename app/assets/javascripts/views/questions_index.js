@@ -5,7 +5,8 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
   events: {
     "click .recent" : "recent",
     "click .by-votes" : "votes",
-    "submit .search" : "search"
+    "submit .search" : "search",
+    "click .all-questions" : "all_questions"
   },
 
   initialize: function (options) {
@@ -67,6 +68,10 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
       var that = this;
       this.collection.fetch({data: $.param(query)})
 
+    },
+
+    all_questions: function(event){
+      this.collection.fetch();
     }
 
 
