@@ -1,9 +1,11 @@
 SeaStack.Views.QuestionsIndex = Backbone.View.extend({
   template: JST["questions/index"],
 
+
   events: {
     "click .recent" : "recent",
-    "click .by-votes" : "votes"
+    "click .by-votes" : "votes",
+    "submit .search" : "search"
   },
 
   initialize: function (options) {
@@ -57,7 +59,15 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
                 $(".recent > button").toggleClass("index-on")
       }
 
-     }
+    },
+
+    search: function(event){
+      event.preventDefault();
+      var query = this.$(".search").serializeJSON();
+      var that = this;
+      this.collection.fetch({data: $.param(query)})
+
+    }
 
 
 

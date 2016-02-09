@@ -3,14 +3,20 @@ $links: 24px;
 
 .index-header {
   font-size: 25px;
+  display: flex;
+  flex-direction: row;
   // background: blue;
 }
 
 .index-header > a {
-  margin: 0 0 0 20px;
+  margin: 0 20px 0 20px;
     color: #30A7FC;
+
 }
 
+.search {
+
+}
 
 
 .question-navigation {
@@ -36,6 +42,7 @@ $links: 24px;
   border-bottom: 1px solid #EAEBEC;
   margin: 10px auto 0 auto;
   justify-content: space-between;
+
 }
 
 

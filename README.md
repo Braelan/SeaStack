@@ -8,7 +8,7 @@ and answer format.
 [heroku]: https://pure-coast-4988.herokuapp.com/#questions
 
 ## Features
-  - Question forum sorted by upvotes
+  - Question forum sorted by most recent or by upvotes
   - Users can create accounts
   - Post questions, answer questions and comment
   - upload photos

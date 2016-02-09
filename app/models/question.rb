@@ -13,5 +13,13 @@ class Question < ActiveRecord::Base
   has_many :tags
   belongs_to :user
 
+  include PgSearch
+  pg_search_scope :search, against: [:title, :body],
+    using: {tsearch: {dictionary: "english"}},
+    associated_against: {user: :name, comments: :body, tags: :category, answers: :body}
+
+  def self.text_search(query)
+      search(query)
+  end
 
 end

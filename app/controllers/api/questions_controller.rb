@@ -7,7 +7,11 @@ class Api::QuestionsController < ApplicationController
   end
 
   def index
+    if search?
+    @questions = Question.text_search(params[:query])
+    else
     @questions = Question.all
+    end
     render "index"
   end
 
@@ -43,9 +47,16 @@ class Api::QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:title, :body, :filepicker_url)
+    params.require(:question).permit(:title, :body, :filepicker_url, :query)
   end
 
+  def search?
+    if params[:query]
+      return true
+    end
+    false
+
+  end
 
 
 end
