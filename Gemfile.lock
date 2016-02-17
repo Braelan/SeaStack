@@ -190,6 +190,7 @@ DEPENDENCIES
   filepicker-rails
   jbuilder (~> 2.0)
   jquery-rails
+  json (~> 1.8.3)
   newrelic_rpm
   omniauth-twitter
   pg
