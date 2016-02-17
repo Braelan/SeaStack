@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'ruby', '2.2.4'
 gem 'ejs'
 
 gem 'filepicker-rails'
