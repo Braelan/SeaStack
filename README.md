@@ -22,7 +22,7 @@ and answer format.
   Ruby on Rails, Backbone.js, PGSQL, Jquery, CSS, BCrypt
 
 
-## Code example for javascript comparator by most recent post
+## Code example for javascript comparator by most recent post:
 ```JavaScript
 comparator: function(model){
   var updates = model.escape('updated_at').split('T');
