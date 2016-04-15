@@ -1,0 +1,79 @@
+// contain all of the logic for the kelp scene
+// this file also contains moves the main question form
+.body-wrap {
+  display: flex;
+  width: 1005px;
+}
+
+.kelp-wrap {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sea {
+  z-index: 1;
+  position: absolute;
+  height:505px;
+}
+
+.kelp {
+  z-index: 2;
+  position: absolute;
+height: 250px;
+width: auto;
+top: 240px;
+left: 25px;
+transform-origin: bottom center ;
+transform: rotate(5deg);
+  transition: transform 20s, ease-in-out;
+}
+
+.bulb {
+  position: absolute;
+  height: 100%;
+  width: auto;
+}
+
+.frond1 {
+  position: absolute;
+  height: 250px;
+  top: -248px;
+  width: auto;
+  transform-origin: bottom center ;
+  transform: rotate(-20deg);
+    transition: transform 20s, ease-in-out;
+}
+
+.frond2 {
+  position: absolute;
+  height: 250px;
+  top: -241px;
+  transform-origin: bottom center ;
+  transform: rotate(10deg);
+  width: auto;
+    transition: transform 20s, ease-in-out;
+}
+
+.frond3 {
+  position: absolute;
+  height: 250px;
+   top: -241px;
+  transform-origin: bottom center ;
+  transform: rotate(0deg);
+  width: auto;
+    transition: transform 20s, ease-in-out;
+}
+
+.kelp-wrap:hover .kelp {
+    transform: rotate(30deg);
+  transform-origin: bottom center ;
+  transition: transform 20s, ease-in-out;
+}
+
+.kelp-wrap:hover .frond1, .kelp-wrap:hover .frond2, .kelp-wrap:hover .frond3 {
+  transform: rotate(50deg);
+  transform-origin: bottom center;
+  transition: transform 30s, ease-in-out;
+}

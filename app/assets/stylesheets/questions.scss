@@ -2,11 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'index.scss';
-
+@import 'kelp-scene.scss';
 
 .new-question-body {
-  width: 1000px;
-  margin: 50px auto;
+  width: 700px;
+  margin: 0 auto;
+  padding: 0 0 0 10px;
 }
 .new-question {
   margin: auto;
