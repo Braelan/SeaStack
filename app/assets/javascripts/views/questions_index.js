@@ -6,11 +6,13 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
     "click .recent" : "recent",
     "click .by-votes" : "votes",
     "submit .search" : "search",
-    "click .all-questions" : "all_questions"
+    "click .all-questions" : "all_questions",
+    "click .index-tag" : "tag"
   },
 
   initialize: function (options) {
     this.collection = options.collection;
+    this.fullCollection = options.collection;
     this.collection.label = "recent";
     this.listenTo(this.collection, "sync", this.render)
   },
@@ -71,7 +73,26 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
     },
 
     all_questions: function(event){
-      this.collection.fetch();
+      var that = this
+      this.collection.fetch({
+        success: function() {
+          that.render();
+        }
+      });
+    },
+// get all of the questions with a given tag
+    tag: function(event) {
+      var tag = $(event.toElement).text().trim();
+      var questions = this.fullCollection;
+      var tagQuestions = new SeaStack.Collections.Questions()
+
+      for (var i = 0; i < questions.length; i++) {
+        if (questions.models[i].attributes.tags.indexOf(tag) !== -1) {
+          tagQuestions.add(questions.models[i])
+        }
+      }
+      this.collection = tagQuestions
+      this.render();
     }
 
 
