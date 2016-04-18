@@ -7,7 +7,8 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
     "click .by-votes" : "votes",
     "submit .search" : "search",
     "click .all-questions" : "all_questions",
-    "click .index-tag" : "tag"
+    "click .index-tag" : "tag",
+    "click .unanswered" : "unanswered"
   },
 
   initialize: function (options) {
@@ -94,6 +95,13 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
         }
       }
       this.collection = tagQuestions
+      this.render();
+    },
+
+    unanswered: function(event){
+      var questions = this.fullCollection.where({answercount: 0});
+      questions = new SeaStack.Collections.Questions(questions)
+      this.collection = questions;
       this.render();
     }
 

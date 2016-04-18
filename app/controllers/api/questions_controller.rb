@@ -10,7 +10,7 @@ class Api::QuestionsController < ApplicationController
     if search?
     @questions = Question.text_search(params[:query])
     else
-    @questions = Question.all
+    @questions = Question.includes(:answers).all
     end
     render "index"
   end

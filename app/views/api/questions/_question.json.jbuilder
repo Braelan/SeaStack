@@ -21,6 +21,8 @@ json.set! :answercount, question.answers.length
 
 json.set! :votes, count
 
+answer_count = question.answers.count
+json.set! :answers, answer_count
 
 
 def taglist(question)
