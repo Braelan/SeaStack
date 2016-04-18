@@ -7,7 +7,7 @@
 
 .kelp-wrap {
   width: 300px;
-  height: 500px;
+  height: 490px;
   position: relative;
   overflow: hidden;
 }
@@ -16,8 +16,19 @@
   z-index: 1;
   position: absolute;
   height:505px;
+  width: 2000px;
+  left: -1200px;
+  transition: left 35s, ease-in-out;
+}
+.kelp-wrap:hover .sea{
+  left: -150px;
+  transition: left 45s, ease-in-out;
 }
 
+.ocean{
+  height: 100%;
+  width: 100%;
+}
 .kelp {
   z-index: 2;
   position: absolute;
