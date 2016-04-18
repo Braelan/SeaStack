@@ -15,8 +15,21 @@ $links: 24px;
 
 }
 
-.se {
-
+.search {
+  background: #EAEBEC;
+  color: #A9A9A9;
+  width: 30px;
+  height: 30px;
+  fill: #A9A9A9;
+}
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid #EAEBEC;
+}
+#search {
+  width: 100px;
 }
 
 
