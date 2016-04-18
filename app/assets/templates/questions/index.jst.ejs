@@ -1,14 +1,14 @@
 
 
 
-
+<main class="index-wrap" >
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 <i>
 </i>
 <div class="index">
 <body class="index">
-<div>
+
 <section class="cloud-scene group">
   <img src="sky.png" class="skybacking">
   <div class="sky">
@@ -28,7 +28,7 @@
 <div class='index-header'>
   <a class="all-questions">All Questions</a>
   <!-- <i class="question-navigation"> -->
-  <a href="#questions/new">Ask a Question</a>
+
   <!-- </i> -->
   <form class="search"  method="get" >
     <input placeholder="search" type="text" name="query" >
@@ -42,6 +42,10 @@
   <li class="by-votes"><button  class="tabby " type="button" name="button">votes</button></li>
 </ul>
 </div>
+
+<div class="wrap-wrap">
+<div class="inner-wrap">
+
 
 
 <% questions.each( function(question) { %>
@@ -108,12 +112,36 @@
   </div>
 
 
-</div>
+
 
   </section>
 <% }); %>
+<!-- closes index-wrap -->
+</div>
+
+<!-- make space for the sidebar -->
+
+<div class="side-bar">
+  <a class="ask-a-question" href="#questions/new">Ask a Question</a>
+  <el class="tag-label" > TAGS </el>
+  <div class="tag-group">
+    <el class="all-tag all-questions"> All </el>
+    <% tags.each( function(tag) { %>
+      <el class="index-tag">
+    <%= tag.escape('category') %>
+      </el>
+    <% }) %>
+  </div>
+</div>
+
+
+
+<!--closes wrap-wrap -->
+</div>
+
 
 
 </div>
 
+</main>
 </body>

@@ -7,5 +7,9 @@ class Api::TagsController < ApplicationController
     # @tag.save
   end
 
+  def index
+    @tags = Tag.all
+  end
+
 
 end

@@ -13,13 +13,15 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
   initialize: function (options) {
     this.collection = options.collection;
     this.fullCollection = options.collection;
+    this.tags = options.tags;
     this.collection.label = "recent";
     this.listenTo(this.collection, "sync", this.render)
+    this.listenTo(this.tags, "sync", this.render)
   },
 
   render: function () {
     this.collection.sort();
-    var view = this.template({questions: this.collection});
+    var view = this.template({questions: this.collection, tags: this.tags});
     this.$el.html(view);
     this.handleTabs();
     return this;

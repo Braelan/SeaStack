@@ -82,15 +82,58 @@ li > .index-on{
   font-family: 'Roboto';
 }
 
+.index-wrap {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 1000px;
+  height: auto;
+  margin: auto;
+}
+
+.inner-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+
+}
+.wrap-wrap {
+  display: flex;
+}
+
+.side-bar {
+  height: auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+}
+.tag-label {
+  font-weight: bold;
+  margin: 0;
+padding: 0;
+}
+.ask-a-question {
+  width: 180px;
+  color: #30A7FC;
+}
+.tag-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
 .index-item {
   // background: yellow;
-  width: 1000px;
+  width: 800px;
   height: 120px;
-  margin: auto;
   display: flex;
   border-bottom: 1px solid #EAEBEC;
-  font-family: 'Roboto'
-
+  font-family: 'Roboto';
 }
 .index-small {
   font-size: $small;
@@ -169,6 +212,17 @@ li > .index-on{
   padding: 5px;
   font-size: $small;
 }
+//same, but so all doesn't trigger js with class click
+.all-tag {
+  background: #E1ECF4;
+  display: block;
+  margin: 5px;
+  align-self: flex-start;
+  color: #4885BB;
+  padding: 5px;
+  font-size: $small;
+}
+
 
 .index-user {
   display: inline-block;

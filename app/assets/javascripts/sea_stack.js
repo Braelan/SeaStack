@@ -6,6 +6,7 @@ window.SeaStack = {
 
   initialize: function () {
     SeaStack.questions = new SeaStack.Collections.Questions();
+    SeaStack.tags = new SeaStack.Collections.Tags();
     SeaStack.questions.fetch({
       success: function() {
         // console.log("fetched") // nice to see if it is fetching
@@ -15,6 +16,7 @@ window.SeaStack = {
       }
     }
     );
+    SeaStack.tags.fetch();
      // this puts html into App/Views/site/root
     new SeaStack.Routers.Router({$rootEl: $("div")});
     Backbone.history.stop();

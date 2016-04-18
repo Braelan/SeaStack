@@ -9,10 +9,11 @@ SeaStack.Routers.Router = Backbone.Router.extend({
   initialize: function(options) {
     this.$rootEl = options.$rootEl;
     this.collection= SeaStack.questions;
+    this.tags = SeaStack.tags;
   },
 
   index: function() {
-    var view = new SeaStack.Views.QuestionsIndex({collection: this.collection});
+    var view = new SeaStack.Views.QuestionsIndex({collection: this.collection, tags: this.tags});
     this._swapView(view)
   },
 
