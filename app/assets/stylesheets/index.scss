@@ -32,7 +32,7 @@ $links: 24px;
   width: 100px;
 }
 
-  
+
 .question-navigation {
 //     width: 900px;
 //     margin: 0 auto;
@@ -137,8 +137,13 @@ li > .index-on{
 padding: 0;
 }
 .ask-a-question {
+  display: inline;
   width: 180px;
   color: #30A7FC;
+  border: 1px solid #EAEBEC;
+  background: #EAEBEC;
+  border-radius: 5px;
+  text-align: center;
 }
 .tag-group {
   display: flex;
@@ -231,8 +236,9 @@ padding: 0;
   color: #4885BB;
   padding: 5px;
   font-size: $small;
+  cursor:pointer;
 }
-//same, but so all doesn't trigger js with class click
+//same as index-tag, but so all doesn't trigger js with class click
 .all-tag {
   background: #E1ECF4;
   display: block;
@@ -241,6 +247,7 @@ padding: 0;
   color: #4885BB;
   padding: 5px;
   font-size: $small;
+  cursor: pointer;
 }
 
 
