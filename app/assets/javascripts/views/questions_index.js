@@ -71,6 +71,7 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
       event.preventDefault();
       var query = this.$(".search-form").serializeJSON();
       var that = this;
+      this.collection = this.fullCollection
       this.collection.fetch({data: $.param(query)})
 
     },
@@ -85,17 +86,23 @@ SeaStack.Views.QuestionsIndex = Backbone.View.extend({
     },
 // get all of the questions with a given tag
     tag: function(event) {
-      var tag = $(event.toElement).text().trim();
-      var questions = this.fullCollection;
-      var tagQuestions = new SeaStack.Collections.Questions()
+      var that = this;
+      this.collection.fetch({
+        success: function() {
+          var tag = $(event.toElement).text().trim();
+          var questions = that.fullCollection;
+          var tagQuestions = new SeaStack.Collections.Questions()
 
-      for (var i = 0; i < questions.length; i++) {
-        if (questions.models[i].attributes.tags.indexOf(tag) !== -1) {
-          tagQuestions.add(questions.models[i])
+          for (var i = 0; i < questions.length; i++) {
+            if (questions.models[i].attributes.tags.indexOf(tag) !== -1) {
+              tagQuestions.add(questions.models[i])
+            }
+          }
+          that.collection = tagQuestions
+          that.render();
         }
-      }
-      this.collection = tagQuestions
-      this.render();
+      })
+
     },
 
     unanswered: function(event){
